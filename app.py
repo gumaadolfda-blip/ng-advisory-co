@@ -2,9 +2,21 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="Guma Adolf | NG Advisory Co. - Platform",
+    page_title="Guma Adolf | NG Advisory Co. Platform",
     page_icon="📊",
     layout="wide",
+)
+
+# --- OPEN GRAPH META TAGS FOR LINK PREVIEWS ---
+st.markdown(
+    """
+    <head>
+        <meta property="og:image" content="https://raw.githubusercontent.com/gumaadolfda-blip/ng-advisory-co/main/a_Change_the_words_on_.png">
+        <meta property="og:title" content="Guma Adolf | NG Advisory Co. Platform">
+        <meta property="og:description" content="Interactive portfolio, supply chain analytics, and data products platform for NG Advisory Co.">
+    </head>
+    """,
+    unsafe_allow_html=True,
 )
 
 # Custom CSS for Elite SaaS Dark Theme Styling
@@ -74,7 +86,7 @@ section = st.sidebar.radio(
 )
 
 if section == "Home & Overview":
-    # --- PERSONAL PHOTO AT THE VERY TOP (Controls LinkedIn Preview) ---
+    # --- PERSONAL PORTRAIT AT THE TOP (Drives LinkedIn Preview) ---
     st.image(
         "a_Change_the_words_on_.png",
         use_container_width=True,
@@ -286,7 +298,6 @@ elif section == "Advisory Framework":
     st.write(
         "An elite data strategy isn't a theoretical exercise—it is the operational backbone of scalable enterprises."
     )
-
     st.markdown("""
     * **Diagnostic Analytics & Bottleneck Identification:** Uncovering hidden friction points in warehouse execution and cargo transit.
     * **Experimental Design & Validation:** Implementing rigorous hypothesis testing, variance checks, and SciPy statistical validation.
