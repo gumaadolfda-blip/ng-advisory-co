@@ -74,6 +74,16 @@ section = st.sidebar.radio(
 )
 
 if section == "Home & Overview":
+    # --- HERO COMMAND CENTER IMAGE ---
+    st.image(
+        "a_Add_even_a_2_screen_.jpg",
+        use_container_width=True,
+        caption=(
+            "NG Advisory Co. Operational Command Center | Multi-Monitor Data"
+            " Engineering & Analytics Environment"
+        ),
+    )
+
     st.markdown(
         '<div class="hero-title">Build better business control without overcomplicating operations.</div>',
         unsafe_allow_html=True,
@@ -268,6 +278,17 @@ elif section == "Advisory Framework":
     st.write(
         "An elite data strategy isn't a theoretical exercise—it is the operational backbone of scalable enterprises."
     )
+
+    # --- FOCUSED EXECUTION IMAGE ---
+    st.image(
+        "a_Change_the_words_on_.jpg",
+        use_container_width=True,
+        caption=(
+            "Guma Adolf | Focused Analytical Execution & Strategic"
+            " Engineering"
+        ),
+    )
+
     st.markdown("""
     * **Diagnostic Analytics & Bottleneck Identification:** Uncovering hidden friction points in warehouse execution and cargo transit.
     * **Experimental Design & Validation:** Implementing rigorous hypothesis testing, variance checks, and SciPy statistical validation.
