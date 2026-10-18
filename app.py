@@ -74,13 +74,12 @@ section = st.sidebar.radio(
 )
 
 if section == "Home & Overview":
-    # --- HERO COMMAND CENTER IMAGE (.png) ---
+    # --- PERSONAL PHOTO AT THE VERY TOP (Controls LinkedIn Preview) ---
     st.image(
-        "a_Add_even_a_2_screen_.png",
+        "a_Change_the_words_on_.png",
         use_container_width=True,
         caption=(
-            "NG Advisory Co. Operational Command Center | Multi-Monitor Data"
-            " Engineering & Analytics Environment"
+            "Guma Adolf | Founder & Lead Data Architect, NG Advisory Co."
         ),
     )
 
@@ -126,6 +125,15 @@ if section == "Home & Overview":
             """,
             unsafe_allow_html=True,
         )
+
+    st.markdown("---")
+    st.markdown("### 🖥️ Operational Command Center Environment")
+    # --- MULTI-MONITOR UI PLACED LOWER DOWN ---
+    st.image(
+        "a_Add_even_a_2_screen_.png",
+        use_container_width=True,
+        caption="Multi-Monitor Data Engineering & Analytics Environment",
+    )
 
     st.markdown("### 📊 Live Operational Control Preview")
     st.text("Inventory Accuracy (Target: >85%)")
@@ -277,16 +285,6 @@ elif section == "Advisory Framework":
     st.header("🏛️ Practical Systems & Business Control")
     st.write(
         "An elite data strategy isn't a theoretical exercise—it is the operational backbone of scalable enterprises."
-    )
-
-    # --- FOCUSED EXECUTION IMAGE (.png) ---
-    st.image(
-        "a_Change_the_words_on_.png",
-        use_container_width=True,
-        caption=(
-            "Guma Adolf | Focused Analytical Execution & Strategic"
-            " Engineering"
-        ),
     )
 
     st.markdown("""
