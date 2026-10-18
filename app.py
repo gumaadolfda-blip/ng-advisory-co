@@ -74,9 +74,9 @@ section = st.sidebar.radio(
 )
 
 if section == "Home & Overview":
-    # --- HERO COMMAND CENTER IMAGE ---
+    # --- HERO COMMAND CENTER IMAGE (.png) ---
     st.image(
-        "a_Add_even_a_2_screen_.jpg",
+        "a_Add_even_a_2_screen_.png",
         use_container_width=True,
         caption=(
             "NG Advisory Co. Operational Command Center | Multi-Monitor Data"
@@ -279,9 +279,9 @@ elif section == "Advisory Framework":
         "An elite data strategy isn't a theoretical exercise—it is the operational backbone of scalable enterprises."
     )
 
-    # --- FOCUSED EXECUTION IMAGE ---
+    # --- FOCUSED EXECUTION IMAGE (.png) ---
     st.image(
-        "a_Change_the_words_on_.jpg",
+        "a_Change_the_words_on_.png",
         use_container_width=True,
         caption=(
             "Guma Adolf | Focused Analytical Execution & Strategic"
