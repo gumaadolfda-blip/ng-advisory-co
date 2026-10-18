@@ -50,12 +50,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Sidebar Navigation containing ALL features
+# Sidebar Navigation containing ALL projects and frameworks
 st.sidebar.markdown("### 🧭 NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
     [
         "Home & Overview",
+        "UAE Energy Supply Analytics",
         "Remote Case Study: ROA",
         "Data Products & Risk Simulation",
         "Advisory Framework",
@@ -116,6 +117,72 @@ if section == "Home & Overview":
   st.text("SOP Compliance & Governance")
   st.progress(92)
 
+elif section == "UAE Energy Supply Analytics":
+  st.header("⚡ UAE Energy Supply Evolution & Sector Analytics (2008–2021)")
+  st.write(
+      "**Project Type:** Exploratory Data Analysis & Python Data Engineering"
+      " Pipeline"
+  )
+  st.write(
+      "**Scope:** Comprehensive multi-sector examination of energy commodities"
+      " across the United Arab Emirates using Pandas, NumPy, Seaborn, and"
+      " Matplotlib[cite: 19]."
+  )
+
+  st.markdown("---")
+  st.subheader("Key Analytical Findings & Methodology")
+
+  col1, col2 = st.columns(2)
+  with col1:
+    st.markdown("""
+        **1. Data Hygiene & Cleaning Pipeline**
+        * Methodically standardized column names and removed trailing whitespaces.
+        * Handled missing value imputation and isolated summary rows by filtering `df.dropna(subset=['Year'])`.
+        * Converted historical date indicators into clean integer time-series arrays[cite: 20, 21].
+        """)
+  with col2:
+    st.markdown("""
+        **2. Advanced Statistical Visualization**
+        * Deployed Seaborn boxplots with `hue` parameter mapping to profile distribution spreads and outliers[cite: 26].
+        * Utilized faceted multi-panel line plots (`sns.relplot`) with independent Y-axes (`sharey=False`) to clearly isolate sector-specific trajectories[cite: 28].
+        """)
+
+  st.markdown("---")
+  st.subheader("Sector Breakdown & Insights")
+
+  tab1, tab2, tab3 = st.tabs(
+      [
+          "Gross Electricity & Gas",
+          "Renewable Energy Surge",
+          "Crude Oil & NGLs",
+      ]
+  )
+
+  with tab1:
+    st.markdown("### Gross Generated Electricity & Natural Gas")
+    st.write(
+        "These sectors operate on a massive national scale, driving industrial"
+        " and urban power generation across Emirates like Abu Dhabi. The"
+        " boxplot distribution confirms steady, high-volume baseload supply"
+        " over the 13-year timeline."
+    )
+
+  with tab2:
+    st.markdown("### Electricity Produced by Renewable Energy")
+    st.success(
+        "🚀 **Key Growth Trend:** Highlighting a dramatic upward inflection"
+        " curve starting around 2017–2018, scaling past 6,000 GWh by 2021 as the"
+        " UAE accelerated its clean energy transition."
+    )
+
+  with tab3:
+    st.markdown("### Crude Oil & Natural Gas Liquids (NGLs)")
+    st.write(
+        "Examined extraction and supply stability across reporting entities,"
+        " validating structural integrity and cyclical adjustments through"
+        " independent Y-axis scaling."
+    )
+
 elif section == "Remote Case Study: ROA":
   st.header("🌍 Remote Client Engagement: Repair Our Air (ROA)")
   st.write(
@@ -136,7 +203,7 @@ elif section == "Remote Case Study: ROA":
       " regional populations at a 5% level of significance ($\alpha = 0.05$)[cite: 19, 20]."
   )
 
-  tab1, tab2, tab3 = st.tabs(
+  tab_roa1, tab_roa2, tab_roa3 = st.tabs(
       [
           "1. California Metro Focus",
           "2. Regional Office Site Selection",
@@ -144,7 +211,7 @@ elif section == "Remote Case Study: ROA":
       ]
   )
 
-  with tab1:
+  with tab_roa1:
     st.markdown("### California Metropolitan Disparity Analysis")
     st.write(
         "**Objective:** Determine if the mean AQI in Los Angeles County is"
@@ -160,7 +227,7 @@ elif section == "Remote Case Study: ROA":
         " divergence."
     )
 
-  with tab2:
+  with tab_roa2:
     st.markdown("### Regional Office Site Selection (New York vs. Ohio)")
     st.write(
         "**Objective:** Does New York have a lower AQI than Ohio for ROA's"
@@ -175,7 +242,7 @@ elif section == "Remote Case Study: ROA":
         " guidance for optimal operational placement."
     )
 
-  with tab3:
+  with tab_roa3:
     st.markdown("### State Regulatory Compliance (Michigan)")
     st.write(
         "**Objective:** Assess whether Michigan's air quality meets or"
