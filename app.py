@@ -64,7 +64,7 @@ st.markdown(
 )
 
 # Sidebar Navigation
-st.sidebar.markdown("### GUMA ADOLF.")
+st.sidebar.markdown("### GUMA ADOLF")
 section = st.sidebar.radio(
     "Navigation",
     ["Overview & Systems", "Data Products & Demos", "Advisory Framework"],
