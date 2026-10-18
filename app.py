@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-     page_title="NG Advisory Co | Guma Adolf.",
+    page_title="Guma Adolf | NG Advisory Co. - Portfolio",
     page_icon="📊",
     layout="wide",
 )
@@ -11,28 +11,22 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Main Background & Font */
     .stApp {
         background-color: #0b0f19;
         color: #f3f4f6;
     }
-    
-    /* Hero Title Styling */
     .hero-title {
-        font-size: 3.2rem;
+        font-size: 3.0rem;
         font-weight: 800;
         color: #ffffff;
         line-height: 1.2;
         margin-bottom: 20px;
     }
-    
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         color: #9ca3af;
         margin-bottom: 30px;
     }
-
-    /* Metric Card Styling */
     .metric-card {
         background-color: #111827;
         border: 1px solid #1f2937;
@@ -40,23 +34,16 @@ st.markdown(
         border-radius: 12px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
-    
     .metric-value {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 700;
         color: #38bdf8;
     }
-    
     .metric-label {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: #9ca3af;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-    }
-
-    /* Sidebar Styling */
-    css-1d391kg {
-        background-color: #0f172a;
     }
     </style>
     """,
@@ -64,14 +51,18 @@ st.markdown(
 )
 
 # Sidebar Navigation
-st.sidebar.markdown("### GUMA ADOLF")
+st.sidebar.markdown("### 🧭 NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
-    ["Overview & Systems", "Data Products & Demos", "Advisory Framework"],
+    [
+        "Overview & Systems",
+        "Remote Client Engagement: ROA",
+        "Data Products & Demos",
+        "Advisory Framework",
+    ],
 )
 
 if section == "Overview & Systems":
-  # Hero Section
   st.markdown(
       '<div class="hero-title">Build better business control without'
       " overcomplicating operations.</div>",
@@ -79,17 +70,15 @@ if section == "Overview & Systems":
   )
   st.markdown(
       '<div class="hero-subtitle">SOPs, warehouse controls, reporting'
-      " automation, data products, and lightweight applications for growing"
-      " businesses that need clarity, structure, and execution velocity. Led"
-      " by Guma Adolf.</div>",
+      " automation, data products, and statistical modeling for enterprises"
+      " that need clarity, structure, and execution velocity. Founded &"
+      " Architected by Guma Adolf.</div>",
       unsafe_allow_html=True,
   )
 
   st.markdown("---")
 
-  # SaaS Metric Grid matching executive standards
   col1, col2, col3 = st.columns(3)
-
   with col1:
     st.markdown(
         """
@@ -100,41 +89,100 @@ if section == "Overview & Systems":
         """,
         unsafe_allow_html=True,
     )
-
   with col2:
     st.markdown(
         """
         <div class="metric-card">
-            <div class="metric-label">SOP Compliance Target</div>
-            <div class="metric-value">92%</div>
+            <div class="metric-label">Statistical Significance</div>
+            <div class="metric-value">alpha = 0.05</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
-
   with col3:
     st.markdown(
         """
         <div class="metric-card">
             <div class="metric-label">Core Tech Stack</div>
-            <div class="metric-value" style="font-size: 1.5rem;">Python • SQL • BI</div>
+            <div class="metric-value" style="font-size: 1.3rem;">Python • SciPy • SQL</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-  st.markdown("### 📊 Live Operational Control Preview")
+elif section == "Remote Client Engagement: ROA":
+  st.header("🌍 Remote Client Engagement: Repair Our Air (ROA)")
   st.write(
-      "Real-time pipeline monitoring simulating inventory accuracy and"
-      " automated action tracking across UAE supply chains."
+      "**Role:** Lead Remote Data Scientist & Statistical Consultant (NG"
+      " Advisory Co.)"
+  )
+  st.write(
+      "**Client Profile:** Environmental think tank formulating national policy"
+      " recommendations using EPA Air Quality Index (AQI) data."
   )
 
-  # Progress indicators simulating the reference design
-  st.text("Inventory Accuracy (Target: >85%)")
-  st.progress(86)
+  st.markdown("---")
+  st.subheader("Executive Summary & Hypothesis Testing Pipeline")
+  st.write(
+      "Executed rigorous statistical evaluations using Python and SciPy"
+      " (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var ="
+      " False`) to account for unequal variances across regional populations"
+      " at a default 5% level of significance (alpha = 0.05)."
+  )
 
-  st.text("SOP Compliance & Governance")
-  st.progress(92)
+  # Three core analytical deliverables from the project
+  tab1, tab2, tab3 = st.tabs(
+      ["1. California Metro Focus", "2. Regional Office Site Selection", "3. Regulatory Policy Test"]
+  )
+
+  with tab1:
+    st.markdown("### California Metropolitan Disparity Analysis")
+    st.write(
+        "**Objective:** Determine if the mean AQI in Los Angeles County is"
+        " statistically different from the rest of California to guide"
+        " metropolitan-focused policy intervention."
+    )
+    st.info(
+        "**Methodology:** Two-sample Welch's t-test comparing LA County AQI"
+        " distribution against California non-metro distribution. Assessed p-value"
+        " against alpha = 0.05."
+    )
+    st.success(
+        "**Strategic Recommendation:** Deployed targeted urban mitigation"
+        " strategies for LA County based on verified statistical divergence."
+    )
+
+  with tab2:
+    st.markdown("### Regional Office Site Selection (New York vs. Ohio)")
+    st.write(
+        "**Objective:** With limited resources, ROA had to choose between New"
+        " York and Ohio for their next regional office. Does New York have a"
+        " lower AQI than Ohio?"
+    )
+    st.info(
+        "**Methodology:** One-tailed or two-tailed independent t-test evaluating"
+        " mean AQI differences between NY and OH datasets using SciPy."
+    )
+    st.success(
+        "**Strategic Recommendation:** Provided data-backed site selection"
+        " guidance to optimize operational placement and resource allocation."
+    )
+
+  with tab3:
+    st.markdown("### State Regulatory Compliance (Michigan)")
+    st.write(
+        "**Objective:** Assess whether Michigan's air quality meets or exceeds"
+        " the federal threshold of a mean AQI of 10 or greater to determine"
+        " policy enforceability."
+    )
+    st.info(
+        "**Methodology:** Hypothesis testing evaluating sample mean AQI against"
+        " the threshold value of 10 under a 95% confidence interval."
+    )
+    st.success(
+        "**Strategic Recommendation:** Delivered clear compliance impact"
+        " reports for state-level environmental policy enforcement."
+    )
 
 elif section == "Data Products & Demos":
   st.header("📦 Featured Data Products & Simulations")
@@ -143,8 +191,6 @@ elif section == "Data Products & Demos":
       " and reduce late delivery risks."
   )
 
-  st.markdown("---")
-  st.subheader("Interactive Risk Threshold Simulation")
   risk_slider = st.slider(
       "Select Late Delivery Risk Threshold Factor",
       min_value=0.0,
@@ -152,7 +198,6 @@ elif section == "Data Products & Demos":
       value=0.25,
       step=0.05,
   )
-
   if risk_slider > 0.5:
     st.error(
         f"⚠️ High Risk Threshold ({risk_slider}): Rerouting logistics"
@@ -166,11 +211,6 @@ elif section == "Data Products & Demos":
 
 elif section == "Advisory Framework":
   st.header("🏛️ Practical Systems & Business Control")
-  st.write(
-      "An elite data strategy isn't a theoretical exercise—it is the operational"
-      " backbone of scalable enterprises."
-  )
-
   st.markdown("""
     * **Diagnostic Analytics & Bottleneck Identification:** Uncovering hidden friction points in warehouse execution and cargo transit.
     * **Experimental Design & Validation:** Implementing rigorous hypothesis testing, variance checks, and SciPy statistical validation.
