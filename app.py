@@ -14,16 +14,28 @@ st.markdown(
     .stApp {
         background-color: #0b0f19;
         color: #f3f4f6;
-        # --- SIDEBAR CONTACT & ADVISORY ---
+    }
+    .hero-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# --- SIDEBAR CONTACT & ADVISORY ---
 st.sidebar.markdown("---")
 st.sidebar.subheader("📬 Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
 st.sidebar.markdown("*Founder, NG Advisory Co.*")
-st.sidebar.markdown("📧 [guma.adolf.da@email.com](mailto:guma.adolf.da@email.com)")  # This is my actual email
-st.sidebar.markdown("📱 +971 56 123 3978")  # This is my actual UAE phone number
+st.sidebar.markdown("📧 [guma.adolf.da@email.com](mailto:guma.adolf.da@email.com)")
+st.sidebar.markdown("📱 +971 56 123 3978")
 st.sidebar.markdown("🔗 [LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
 st.sidebar.markdown("---")
-    }
     .hero-title {
         font-size: 2.8rem;
         font-weight: 800;
