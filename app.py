@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="NG Advisory Co. | Data Products & Systems",
+    page_title="Guma Adolf | NG Advisory Co.",
     page_icon="📊",
     layout="wide",
 )
@@ -11,8 +11,9 @@ st.set_page_config(
 st.title("NG Advisory Co.")
 st.subheader("Business Control, Data Products & Practical Systems")
 st.write(
-    "Engineering high-end logistics data science, predictive risk models, and"
-    " robust operational systems for UAE enterprises."
+    "Founded & Architected by **Guma Adolf | Data Scientist** — Engineering"
+    " high-end logistics analytics, predictive risk models, and robust"
+    " operational systems for UAE enterprises."
 )
 
 st.markdown("---")
@@ -26,8 +27,9 @@ section = st.sidebar.selectbox(
 if section == "Home & Overview":
   st.header("Welcome to NG Advisory Co.")
   st.write(
-      "We bridge advanced statistical modeling (hypothesis testing, risk"
-      " index pipelines) with enterprise business control."
+      "Led by **Guma Adolf**, we bridge advanced statistical modeling"
+      " (hypothesis testing, risk index pipelines) with enterprise business"
+      " control."
   )
 
   col1, col2, col3 = st.columns(3)
@@ -83,5 +85,6 @@ elif section == "Advisory Framework":
 # Footer
 st.markdown("---")
 st.markdown(
-    "© 2026 NG Advisory Co. | Built by Guma Adolf | Connected across the UAE"
+    "© 2026 NG Advisory Co. | Built by Guma Adolf, Data Scientist | Connected"
+    " across the UAE"
 )
