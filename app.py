@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-     page_title="Guma Adolf | NG Advisory Co.",
+     page_title="NG Advisory Co | Guma Adolf.",
     page_icon="📊",
     layout="wide",
 )
