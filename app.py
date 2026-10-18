@@ -1,8 +1,8 @@
-import streamlit as st
+ort streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="Guma Adolf | NG Advisory Co. - Portfolio",
+    page_title="Guma Adolf | NG Advisory Co. - Platform",
     page_icon="📊",
     layout="wide",
 )
@@ -16,14 +16,14 @@ st.markdown(
         color: #f3f4f6;
     }
     .hero-title {
-        font-size: 3.0rem;
+        font-size: 2.8rem;
         font-weight: 800;
         color: #ffffff;
         line-height: 1.2;
         margin-bottom: 20px;
     }
     .hero-subtitle {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         color: #9ca3af;
         margin-bottom: 30px;
     }
@@ -50,19 +50,19 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Sidebar Navigation
+# Sidebar Navigation containing ALL features
 st.sidebar.markdown("### 🧭 NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
     [
-        "Overview & Systems",
-        "Remote Client Engagement: ROA",
-        "Data Products & Demos",
+        "Home & Overview",
+        "Remote Case Study: ROA",
+        "Data Products & Risk Simulation",
         "Advisory Framework",
     ],
 )
 
-if section == "Overview & Systems":
+if section == "Home & Overview":
   st.markdown(
       '<div class="hero-title">Build better business control without'
       " overcomplicating operations.</div>",
@@ -93,8 +93,8 @@ if section == "Overview & Systems":
     st.markdown(
         """
         <div class="metric-card">
-            <div class="metric-label">Statistical Significance</div>
-            <div class="metric-value">alpha = 0.05</div>
+            <div class="metric-label">SOP Compliance Target</div>
+            <div class="metric-value">92%</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -104,93 +104,101 @@ if section == "Overview & Systems":
         """
         <div class="metric-card">
             <div class="metric-label">Core Tech Stack</div>
-            <div class="metric-value" style="font-size: 1.3rem;">Python • SciPy • SQL</div>
+            <div class="metric-value" style="font-size: 1.3rem;">Python • SQL • BI</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-elif section == "Remote Client Engagement: ROA":
+  st.markdown("### 📊 Live Operational Control Preview")
+  st.text("Inventory Accuracy (Target: >85%)")
+  st.progress(86)
+  st.text("SOP Compliance & Governance")
+  st.progress(92)
+
+elif section == "Remote Case Study: ROA":
   st.header("🌍 Remote Client Engagement: Repair Our Air (ROA)")
   st.write(
       "**Role:** Lead Remote Data Scientist & Statistical Consultant (NG"
       " Advisory Co.)"
   )
   st.write(
-      "**Client Profile:** Environmental think tank formulating national policy"
-      " recommendations using EPA Air Quality Index (AQI) data."
+      "**Client Profile:** Environmental think tank formulating national"
+      " policy recommendations using EPA Air Quality Index (AQI) data[cite: 19]."
   )
 
   st.markdown("---")
   st.subheader("Executive Summary & Hypothesis Testing Pipeline")
   st.write(
       "Executed rigorous statistical evaluations using Python and SciPy"
-      " (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var ="
-      " False`) to account for unequal variances across regional populations"
-      " at a default 5% level of significance (alpha = 0.05)."
+      " (`scipy.stats.ttest_ind`) with Welch's t-test adjustments"
+      " (`equal_var = False`) to account for unequal variances across"
+      " regional populations at a 5% level of significance ($\alpha = 0.05$)[cite: 19, 20]."
   )
 
-  # Three core analytical deliverables from the project
   tab1, tab2, tab3 = st.tabs(
-      ["1. California Metro Focus", "2. Regional Office Site Selection", "3. Regulatory Policy Test"]
+      [
+          "1. California Metro Focus",
+          "2. Regional Office Site Selection",
+          "3. Regulatory Policy Test",
+      ]
   )
 
   with tab1:
     st.markdown("### California Metropolitan Disparity Analysis")
     st.write(
         "**Objective:** Determine if the mean AQI in Los Angeles County is"
-        " statistically different from the rest of California to guide"
-        " metropolitan-focused policy intervention."
+        " statistically different from the rest of California[cite: 19]."
     )
     st.info(
-        "**Methodology:** Two-sample Welch's t-test comparing LA County AQI"
-        " distribution against California non-metro distribution. Assessed p-value"
-        " against alpha = 0.05."
+        "**Methodology:** Two-sample Welch's t-test comparing LA County"
+        " against non-metro California ($\alpha = 0.05$)[cite: 19, 20]."
     )
     st.success(
         "**Strategic Recommendation:** Deployed targeted urban mitigation"
-        " strategies for LA County based on verified statistical divergence."
+        " strategies for LA County based on verified statistical"
+        " divergence."
     )
 
   with tab2:
     st.markdown("### Regional Office Site Selection (New York vs. Ohio)")
     st.write(
-        "**Objective:** With limited resources, ROA had to choose between New"
-        " York and Ohio for their next regional office. Does New York have a"
-        " lower AQI than Ohio?"
+        "**Objective:** Does New York have a lower AQI than Ohio for ROA's"
+        " next regional hub under resource constraints?[cite: 19]"
     )
     st.info(
-        "**Methodology:** One-tailed or two-tailed independent t-test evaluating"
-        " mean AQI differences between NY and OH datasets using SciPy."
+        "**Methodology:** Independent t-test evaluating mean AQI differences"
+        " between NY and OH datasets."
     )
     st.success(
         "**Strategic Recommendation:** Provided data-backed site selection"
-        " guidance to optimize operational placement and resource allocation."
+        " guidance for optimal operational placement."
     )
 
   with tab3:
     st.markdown("### State Regulatory Compliance (Michigan)")
     st.write(
-        "**Objective:** Assess whether Michigan's air quality meets or exceeds"
-        " the federal threshold of a mean AQI of 10 or greater to determine"
-        " policy enforceability."
+        "**Objective:** Assess whether Michigan's air quality meets or"
+        " exceeds the federal threshold of a mean AQI of 10 or greater[cite: 19]."
     )
     st.info(
-        "**Methodology:** Hypothesis testing evaluating sample mean AQI against"
-        " the threshold value of 10 under a 95% confidence interval."
+        "**Methodology:** Hypothesis testing evaluating sample mean AQI"
+        " against threshold value under a 95% confidence interval."
     )
     st.success(
-        "**Strategic Recommendation:** Delivered clear compliance impact"
-        " reports for state-level environmental policy enforcement."
+        "**Strategic Recommendation:** Delivered compliance impact reports"
+        " for state-level environmental policy enforcement."
     )
 
-elif section == "Data Products & Demos":
+elif section == "Data Products & Risk Simulation":
   st.header("📦 Featured Data Products & Simulations")
   st.write(
       "Interactive analytics engines built to optimize fulfillment pathways"
       " and reduce late delivery risks."
   )
 
+  st.markdown("---")
+  st.subheader("Interactive Late Delivery Risk Simulation")
   risk_slider = st.slider(
       "Select Late Delivery Risk Threshold Factor",
       min_value=0.0,
@@ -198,6 +206,7 @@ elif section == "Data Products & Demos":
       value=0.25,
       step=0.05,
   )
+
   if risk_slider > 0.5:
     st.error(
         f"⚠️ High Risk Threshold ({risk_slider}): Rerouting logistics"
@@ -211,6 +220,10 @@ elif section == "Data Products & Demos":
 
 elif section == "Advisory Framework":
   st.header("🏛️ Practical Systems & Business Control")
+  st.write(
+      "An elite data strategy isn't a theoretical exercise—it is the"
+      " operational backbone of scalable enterprises."
+  )
   st.markdown("""
     * **Diagnostic Analytics & Bottleneck Identification:** Uncovering hidden friction points in warehouse execution and cargo transit.
     * **Experimental Design & Validation:** Implementing rigorous hypothesis testing, variance checks, and SciPy statistical validation.
@@ -220,8 +233,8 @@ elif section == "Advisory Framework":
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026"
-    " NG Advisory Co. | Founded & Architected by Guma Adolf | Connected"
+    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>©"
+    " 2026 NG Advisory Co. | Founded & Architected by Guma Adolf | Connected"
     " across the UAE</div>",
     unsafe_allow_html=True,
 )
