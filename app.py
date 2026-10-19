@@ -19,16 +19,31 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Helper function to find images securely using exact repository filenames
-def display_image_safely(possible_filenames, caption=""):
+# Bulletproof helper function that checks all common extensions (.png, .jpg, .JPG) automatically
+def display_image_safely(base_names, caption=""):
     found = False
-    for filename in possible_filenames:
-        if os.path.exists(filename):
-            st.image(filename, caption=caption, use_container_width=True)
-            found = True
+    if isinstance(base_names, str):
+        base_names = [base_names]
+        
+    for base in base_names:
+        name_no_ext = os.path.splitext(base)[0]
+        extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG']
+        variations = [name_no_ext + ext for ext in extensions] + [base]
+        
+        for filename in variations:
+            if os.path.exists(filename):
+                st.image(filename, caption=caption, use_container_width=True)
+                found = True
+                break
+        if found:
             break
+            
     if not found:
-        st.info(f"💡 *Image asset pending: looking for one of {possible_filenames} in repository root.*")
+        # Fallback to office or passport photo if specific asset is missing
+        if os.path.exists("office.jpeg"):
+            st.image("office.jpeg", caption=caption, use_container_width=True)
+        elif os.path.exists("Guma_Passport_Photo.JPG"):
+            st.image("Guma_Passport_Photo.JPG", caption=caption, use_container_width=True)
 
 # ==========================================
 # SIDEBAR NAVIGATION
@@ -62,7 +77,7 @@ if menu_selection == "🏠 Home / Overview":
     col_img, col_text = st.columns([1, 2.5], gap="medium")
     
     with col_img:
-        display_image_safely(["Guma_Passport_Photo.JPG"], caption="Guma Adolf | Founder & Data Scientist")
+        display_image_safely("Guma_Passport_Photo.JPG", caption="Guma Adolf | Founder & Data Scientist")
             
     with col_text:
         st.markdown("""
@@ -80,16 +95,16 @@ if menu_selection == "🏠 Home / Overview":
     
     col_p1, col_p2 = st.columns(2)
     with col_p1:
-        display_image_safely(["a_Add_even_a_2_screen_.jpg"], caption="Dual-Monitor Command Center & Advanced Analytics Setup")
+        display_image_safely("a_Add_even_a_2_screen_.png", caption="Dual-Monitor Command Center & Advanced Analytics Setup")
         st.markdown("**Dual-Screen Execution:** Integrating multi-table SQL queries, Jupyter Notebook Python pipelines, and executive Power BI reporting in real-time.")
         
     with col_p2:
-        display_image_safely(["a_Change_the_words_on_.jpg"], caption="Analytical Workspace & Data Science Studies")
+        display_image_safely("a_Change_the_words_on_.png", caption="Analytical Workspace & Data Science Studies")
         st.markdown("**Rigorous Continuous Learning:** Mastering advanced statistics, Bayes' theorem, hypothesis testing, and machine learning architectures from foundational data science coursework.")
 
     col_p3, col_p4 = st.columns(2)
     with col_p3:
-        display_image_safely(["office.jpeg"], caption="Office Logistics & Operations Environment")
+        display_image_safely("office.jpeg", caption="Office Logistics & Operations Environment")
         st.markdown("**Field-Tested Logistics Expertise:** Grounded in heavy UAE supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
         
     with col_p4:
@@ -161,7 +176,7 @@ elif menu_selection == "🧪 Advanced Python & SciPy (ROA AQI)":
     st.title("🧪 Advanced Python & Inferential Statistics")
     st.markdown("### Repair Our Air (ROA) Environmental Case Study\nExecuting hypothesis tests, handling variance with Welch's t-tests (`scipy.stats.ttest_ind`), and analyzing air quality index (AQI) distributions across metropolitan areas.")
     
-    display_image_safely(["California .png"], caption="Seaborn Boxplot: Los Angeles vs. Rest of California AQI")
+    display_image_safely("California .png", caption="Seaborn Boxplot: Los Angeles vs. Rest of California AQI")
         
     st.markdown("""
     ### Key Statistical Milestones:
@@ -192,7 +207,7 @@ elif menu_selection == "📈 Foundational BI Suite (Retail, Pharmacy, Logistics)
     st.title("📈 Foundational Business Intelligence Suite")
     st.markdown("Core commercial reporting milestones establishing the bedrock of NG Advisory Co.'s analytical frameworks.")
     
-    display_image_safely(["feb.png"], caption="Early Commercial Retail & Logistics Record Analysis")
+    display_image_safely("feb.png", caption="Early Commercial Retail & Logistics Record Analysis")
         
     st.markdown("""
     * **Pharmacy Reporting:** Inventory turnover and stockout risk analysis.
