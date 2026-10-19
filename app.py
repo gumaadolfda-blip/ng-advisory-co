@@ -19,7 +19,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Custom CSS for Elite SaaS Dark Theme Styling
+# Custom CSS for Elite SaaS Dark Theme & Uniform Image Sizing
 st.markdown(
     """
     <style>
@@ -56,6 +56,14 @@ st.markdown(
         color: #9ca3af;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+    }
+    /* Force matching uniform height and object-fit for side-by-side screenshots */
+    [data-testid="stImage"] img {
+        height: 300px !important;
+        object-fit: cover !important;
+        width: 100% !important;
+        border-radius: 8px !important;
+        border: 1px solid #1f2937;
     }
     </style>
     """,
