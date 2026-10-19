@@ -78,10 +78,12 @@ section = st.sidebar.radio(
     "Navigation",
     [
         "Home & Overview",
+        "Superstore Supply Chain & Profitability",
+        "Global Logistics & Risk Intelligence",
+        "Global CO2 Emissions Analytics",
+        "Tableau Public Portfolio Suite",
         "UAE Energy Supply & CO Analytics",
-        "Shipment Performance & Risk BI",
         "Remote Case Study: ROA",
-        "Weather & Lightning Risk Analysis",
         "Foundational BI Suite",
         "Data Products & Risk Simulation",
         "Advisory Framework",
@@ -142,18 +144,122 @@ if section == "Home & Overview":
         )
 
     st.markdown("---")
-    st.markdown("### 🖥️ Operational Command Center Environment")
-    st.image(
-        "a_Add_even_a_2_screen_.png",
-        use_container_width=True,
-        caption="Multi-Monitor Data Engineering & Analytics Environment",
-    )
+    st.markdown("### 🖥️ Operational Command Center & Advisory Environment")
+    
+    col_env1, col_env2 = st.columns(2)
+    with col_env1:
+        st.image(
+            "office.jpeg",
+            use_container_width=True,
+            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment[cite: 31]",
+        )
+    with col_env2:
+        st.image(
+            "a_Add_even_a_2_screen_.png",
+            use_container_width=True,
+            caption="Multi-Monitor Data Engineering & Analytics Command Center",
+        )
 
     st.markdown("### 📊 Live Operational Control Preview")
     st.text("Inventory Accuracy (Target: >85%)")
     st.progress(86)
     st.text("SOP Compliance & Governance")
     st.progress(92)
+
+elif section == "Superstore Supply Chain & Profitability":
+    st.header("📊 Superstore Supply Chain & Profitability Optimization")
+    st.write(
+        "**Project Type:** Enterprise Power BI Commercial & Profit Margin Analysis"
+    )
+    st.write(
+        "**Scope:** Granular breakdown of sales revenue by product categories (Furniture, Office Supplies, Technology), segment profitability, regional performance, and shipping mode efficiencies."
+    )
+
+    st.markdown("---")
+    st.image(
+        "Screenshot 2026-07-01 095504.png",
+        use_container_width=True,
+        caption="Superstore Executive View | Sales Revenue by Category & Profit Margins by Segment[cite: 38]",
+    )
+
+    st.markdown("---")
+    st.subheader("Key Commercial Insights")
+    st.markdown("""
+    * **Revenue Concentration:** Analyzed revenue distribution across Furniture, Office Supplies, and Technology product lines[cite: 38].
+    * **Segment Margin Review:** Evaluated segment profitability (Consumer vs. Corporate vs. Home Office) to pinpoint high-margin operational sweet spots[cite: 38].
+    * **Shipping Efficiency:** Assessed delivery turnaround times across Standard, Second, and First Class shipping modes.
+    """)
+
+elif section == "Global Logistics & Risk Intelligence":
+    st.header("🌐 Global Logistics & Supply Chain Analysis Dashboard (2026)")
+    st.write(
+        "**Project Type:** Global Fulfillment Risk & Delivery Optimization Suite"
+    )
+    st.write(
+        "**Scope:** Comprehensive multi-region tracking platform managing AED 36M+ in sales volume, late delivery risk modeling, shipping mode distributions, and global order mapping."
+    )
+
+    st.markdown("---")
+    st.image(
+        "Screenshot 2026-03-12 221148.jpg",
+        use_container_width=True,
+        caption="Logistics & Supply Chain Analysis Dashboard | Global Order Mapping, Delivery Status Breakdown & Risk Sliders[cite: 36]",
+    )
+
+    st.markdown("---")
+    st.subheader("Operational Highlights")
+    st.markdown("""
+    * **Risk Mitigation:** Integrated interactive `late_delivery_risk` slider controls to dynamically filter high-exposure transport corridors[cite: 36].
+    * **Delivery Status Breakdown:** Visualized proportions of Advanced Shipping, Late Delivery, Shipping Canceled, and On-Time fulfillment[cite: 36].
+    * **Global Geographic Spread:** Mapped order concentration across North America, South America, Europe, Asia, and Australia[cite: 36].
+    """)
+
+elif section == "Global CO2 Emissions Analytics":
+    st.header("🌍 Global CO2 Emissions & Per Capita Intelligence Dashboard")
+    st.write(
+        "**Project Type:** Environmental Impact & Macro-Economic Power BI Suite"
+    )
+    st.write(
+        "**Scope:** Cross-country evaluation of historical total CO2 emissions alongside per capita emission rates, featuring dynamic country code filters and search lookup."
+    )
+
+    st.markdown("---")
+    st.image(
+        "Screenshot 2026-06-05 210806.png",
+        use_container_width=True,
+        caption="CO2 Emissions Executive Overview | Top Historical Countries & Per Capita Rankings[cite: 37]",
+    )
+
+    st.markdown("---")
+    st.subheader("Key Analytical Takeaways")
+    st.markdown("""
+    * **Historical Volume Leaders:** Ranked top global economies by total cumulative CO2 output (kt)[cite: 37].
+    * **Per Capita Intensity:** Examined per capita metrics highlighting high-intensity regions such as Qatar, UAE, and Kuwait[cite: 37].
+    * **Interactive Filtering:** Deployed dynamic search bars and ISO country code slicers (`Country Code`) for targeted geopolitical analysis[cite: 37].
+    """)
+
+elif section == "Tableau Public Portfolio Suite":
+    st.header("📈 Tableau Public Analytics Portfolio")
+    st.write(
+        "**Project Type:** Cloud-Published Interactive Vizzes & Spatial Dashboards"
+    )
+    st.write(
+        "**Scope:** Showcasing published Tableau Public works including strike analysis, temporal transit metrics, and global climate visualizations."
+    )
+
+    st.markdown("---")
+    st.image(
+        "WhatsApp Image 2026-09-12 at 8.55.09 AM.jpeg",
+        use_container_width=True,
+        caption="Tableau Public Creator Profile | GUMA_ADOLF_TABLEAU_PROJECT & CO2 VIZ[cite: 30]",
+    )
+
+    st.markdown("---")
+    st.subheader("Published Viz Highlights")
+    st.markdown("""
+    * **GUMA_ADOLF_TABLEAU_PROJECT:** Multi-quarter and multi-year distributional analysis tracking high-volume event metrics[cite: 30].
+    * **CO2 VIZ:** Geospatial world map color-coded by per capita emission gradients[cite: 30].
+    """)
 
 elif section == "UAE Energy Supply & CO Analytics":
     st.header("⚡ UAE Energy Commodities & Carbon Monoxide Analytics")
@@ -181,53 +287,6 @@ elif section == "UAE Energy Supply & CO Analytics":
             caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping[cite: 29]",
         )
 
-    st.markdown("---")
-    st.subheader("2. Python Jupyter Notebook: Carbon Monoxide (CO) Analysis")
-
-    col_py1, col_py2 = st.columns(2)
-    with col_py1:
-        st.image(
-            "chart.png",
-            use_container_width=True,
-            caption="Average CO Concentration by Emirate (2006–2016)[cite: 21]",
-        )
-    with col_py2:
-        st.image(
-            "final.png",
-            use_container_width=True,
-            caption=(
-                "Average CO Concentration by Location Type (Beside Road vs."
-                " Industrial)[cite: 22]"
-            ),
-        )
-
-elif section == "Shipment Performance & Risk BI":
-    st.header("📦 Enterprise Shipment Performance & Risk Intelligence")
-    st.write(
-        "**Project Type:** Advanced Power BI Supply Chain Control Dashboard"
-    )
-    st.write(
-        "**Scope:** Multi-tab analytics engine tracking shipment status, transit times, origin/destination country flows, and automated late-delivery risk scores."
-    )
-
-    st.markdown("---")
-    st.image(
-        "powerbi.png",
-        use_container_width=True,
-        caption=(
-            "Shipment Performance Dashboard | Executive Overview, Geospatial"
-            " Risk Mapping & Route Analysis[cite: 25]"
-        ),
-    )
-
-    st.markdown("---")
-    st.subheader("Core Operational Metrics")
-    st.markdown("""
-    * **Transit Time Optimization:** Tracking average transit duration (15.38 days) to identify route bottlenecks[cite: 25].
-    * **Risk Flagging:** Automated risk scoring and late-shipment monitoring across international corridors (USA, Germany, Japan, China, Brazil, UK)[cite: 25].
-    * **Transport Mode Distribution:** Splitting logistics volume across Air, Sea, and Land transport channels[cite: 25].
-    """)
-
 elif section == "Remote Case Study: ROA":
     st.header("🌍 Remote Client Engagement: Repair Our Air (ROA)")
     st.write(
@@ -239,63 +298,17 @@ elif section == "Remote Case Study: ROA":
 
     st.markdown("---")
     st.subheader("Exploratory Data Analysis: State-Level AQI Distribution")
-    st.write(
-        "Utilized Seaborn boxplots (`sns.boxplot`) to profile AQI distributions, isolate skewness, and flag extreme metropolitan outliers across key state jurisdictions prior to formal Welch's t-test evaluations."
-    )
-
     st.image(
         "California .png",
         use_container_width=True,
-        caption=(
-            "Seaborn Boxplot Analysis | State-Level AQI Distribution, Spread,"
-            " and Outlier Detection (California vs. National Peers)[cite: 20]"
-        ),
-    )
-
-    st.markdown("---")
-    st.subheader(
-        "Executive Summary & Hypothesis Testing Pipeline (alpha = 0.05)"
+        caption="Seaborn Boxplot Analysis | State-Level AQI Distribution & Outlier Detection[cite: 20]",
     )
     st.write(
-        "Executed rigorous statistical evaluations using Python and SciPy (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var = False`) to account for unequal variances across regional populations."
+        "Executed rigorous statistical evaluations using Python and SciPy (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var = False`) to account for unequal variances across regional populations (alpha = 0.05)."
     )
-
-elif section == "Weather & Lightning Risk Analysis":
-    st.header("⚡ Environmental Risk: Weather & Lightning Strike Analytics")
-    st.write(
-        "**Project Type:** Exploratory Time-Series & Statistical Distribution Analysis"
-    )
-    st.write(
-        "**Scope:** Examining temporal weather volatility, weekday distributions, and seasonal percentage concentrations of lightning and storm strikes."
-    )
-
-    st.markdown("---")
-    col_w1, col_w2 = st.columns(2)
-    with col_w1:
-        st.image(
-            "Screenshot 2026-08-23 081053[1].png",
-            use_container_width=True,
-            caption="Lightning Distribution per Weekday (2018)[cite: 26]",
-        )
-    with col_w2:
-        st.image(
-            "Screenshot 2026-08-23 081139[2].png",
-            use_container_width=True,
-            caption=(
-                "Monthly Percentage Concentration of Lightning Strikes"
-                " (2016–2018)[cite: 27]"
-            ),
-        )
 
 elif section == "Foundational BI Suite":
     st.header("📈 Foundational Business Intelligence Suite")
-    st.write(
-        "**Project Type:** Early Commercial, Pharmacy, and Logistics Power BI Reports"
-    )
-    st.write(
-        "**Scope:** Milestone reporting establishing core competencies in data modeling, DAX measures, geospatial mapping, and commercial dashboard design."
-    )
-
     tab_f1, tab_f2, tab_f3 = st.tabs(
         ["Pharmacy Sales BI", "Logistics Performance BI", "Retail Sales BI"]
     )
@@ -305,13 +318,13 @@ elif section == "Foundational BI Suite":
         st.image(
             "feb.png",
             use_container_width=True,
-            caption="Regional UAE Geographic Mapping & Product Profitability",
+            caption="Regional UAE Geographic Mapping & Product Profitability[cite: 13]",
         )
 
     with tab_f2:
         st.subheader("Logistics Performance Overview (Feb 2026)")
         st.image(
-            "logistics .png",
+            "WhatsApp Image 2026-09-07 at 10.58.10AM.jpeg",
             use_container_width=True,
             caption="UAE Route Mapping, Freight Costs & Status Tracking",
         )
@@ -319,21 +332,13 @@ elif section == "Foundational BI Suite":
     with tab_f3:
         st.subheader("Retail Sales Dashboard (Mar 2026)")
         st.image(
-            "my.png",
+            "WhatsApp Image 2026-09-07 at 10.58.22AM.jpeg",
             use_container_width=True,
-            caption=(
-                "AED 456K Total Sales, Category Breakdown & Demographic Slicers"
-            ),
+            caption="AED 456K Total Sales, Category Breakdown & Demographic Slicers",
         )
 
 elif section == "Data Products & Risk Simulation":
     st.header("📦 Featured Data Products & Simulations")
-    st.write(
-        "Interactive analytics engines built to optimize fulfillment pathways and reduce late delivery risks."
-    )
-
-    st.markdown("---")
-    st.subheader("Interactive Late Delivery Risk Simulation")
     risk_slider = st.slider(
         "Select Late Delivery Risk Threshold Factor",
         min_value=0.0,
@@ -341,7 +346,6 @@ elif section == "Data Products & Risk Simulation":
         value=0.25,
         step=0.05,
     )
-
     if risk_slider > 0.5:
         st.error(
             f"⚠️ High Risk Threshold ({risk_slider}): Rerouting logistics bottlenecks and triggering automated exception alerts."
@@ -353,9 +357,6 @@ elif section == "Data Products & Risk Simulation":
 
 elif section == "Advisory Framework":
     st.header("🏛️ Practical Systems & Business Control")
-    st.write(
-        "An elite data strategy isn't a theoretical exercise—it is the operational backbone of scalable enterprises."
-    )
     st.markdown("""
     * **Diagnostic Analytics & Bottleneck Identification:** Uncovering hidden friction points in warehouse execution and cargo transit.
     * **Experimental Design & Validation:** Implementing rigorous hypothesis testing, variance checks, and SciPy statistical validation.
