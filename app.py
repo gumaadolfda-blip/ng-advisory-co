@@ -57,18 +57,48 @@ menu_selection = st.sidebar.radio(
 # 1. HOME / OVERVIEW SECTION
 # ==========================================
 if menu_selection == "🏠 Home / Overview":
-    # Hero Command Center Banner
-    display_image_safely(["a_Add_even_a_2_screen_.jpg", "office.jpeg"], caption="NG Advisory Co. Command Center | Guma Adolf")
     
-    st.markdown("""
-    # NG Advisory Co.
-    ### *Bridging Heavy Operations & Predictive Data Science*
+    # Hero Section with Passport Photo & Executive Introduction
+    col_img, col_text = st.columns([1, 2.5], gap="medium")
     
-    Welcome to the digital command center of **NG Advisory Co.** Founded on the front lines of UAE logistics and supply chain execution (AED 36M+ scale), our mission is simple: **move beyond static reporting into predictive risk and proactive operational control.**
-    """)
+    with col_img:
+        display_image_safely(["Guma_Passport_Photo.JPG"], caption="Guma Adolf | Founder & Data Scientist")
+            
+    with col_text:
+        st.markdown("""
+        # NG Advisory Co.
+        ### *Bridging Heavy Operations & Predictive Data Science*
+        
+        Welcome to the digital command center of **NG Advisory Co.** Founded on the front lines of UAE logistics and supply chain execution (AED 36M+ scale), our mission is simple: **move beyond static reporting into predictive risk and proactive operational control.**
+        """)
     
     st.markdown("---")
     
+    # Four Executive Visual Assets Showcase Gallery
+    st.markdown("### 🖥️ Executive Command Center & Professional Gallery")
+    st.markdown("Explore the operational environments and professional milestones driving NG Advisory Co.:")
+    
+    col_p1, col_p2 = st.columns(2)
+    with col_p1:
+        display_image_safely(["a_Add_even_a_2_screen_.jpg"], caption="Dual-Monitor Command Center & Advanced Analytics Setup")
+        st.markdown("**Dual-Screen Execution:** Integrating multi-table SQL queries, Jupyter Notebook Python pipelines, and executive Power BI reporting in real-time.")
+        
+    with col_p2:
+        display_image_safely(["a_Change_the_words_on_.jpg"], caption="Analytical Workspace & Data Science Studies")
+        st.markdown("**Rigorous Continuous Learning:** Mastering advanced statistics, Bayes' theorem, hypothesis testing, and machine learning architectures from foundational data science coursework.")
+
+    col_p3, col_p4 = st.columns(2)
+    with col_p3:
+        display_image_safely(["office.jpeg"], caption="Office Logistics & Operations Environment")
+        st.markdown("**Field-Tested Logistics Expertise:** Grounded in heavy UAE supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
+        
+    with col_p4:
+        display_image_safely(["California .png", "feb.png"], caption="Environmental & Commercial BI Deliverables")
+        st.markdown("**Data-Driven Client Value:** Converting raw datasets (EPA AQI, retail sales, pharmacy records) into actionable executive dashboards and predictive risk models.")
+
+    st.markdown("---")
+    
+    # Core Value Proposition / Methodology
     st.markdown("""
     ### 🚀 The NG Advisory Methodology: From Coursework to Control
     Every analytical framework we build—whether through advanced Python pipelines, statistical modeling, or business intelligence—is engineered to solve real-world operational bottlenecks:
