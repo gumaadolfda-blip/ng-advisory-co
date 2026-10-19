@@ -144,22 +144,44 @@ if section == "Home & Overview":
         )
 
     st.markdown("---")
-    st.markdown("### 🖥️ Operational Command Center & Advisory Environment")
+    st.markdown("### 🖥️ Executive Command Center & Professional Gallery")
+    st.markdown("Explore the operational environments and professional milestones driving NG Advisory Co.:")
 
-    col_env1, col_env2 = st.columns(2)
-    with col_env1:
+    col_p1, col_p2 = st.columns(2)
+    with col_p1:
         st.image(
             "office.jpeg",
             use_container_width=True,
             caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment",
         )
-    with col_env2:
+        st.markdown("**Field-Tested Logistics Execution:** Grounded in heavy UAE supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
+
+    with col_p2:
         st.image(
             "a_Add_even_a_2_screen_.png",
             use_container_width=True,
             caption="Multi-Monitor Data Engineering & Analytics Command Center",
         )
+        st.markdown("**Dual-Screen Enterprise Execution:** Integrating multi-table SQL queries, Jupyter Notebook Python pipelines, and executive Power BI reporting in real-time.")
 
+    col_p3, col_p4 = st.columns(2)
+    with col_p3:
+        st.image(
+            "a_Change_the_words_on_.png",
+            use_container_width=True,
+            caption="Analytical Workspace & Advanced Statistics Studies",
+        )
+        st.markdown("**Rigorous Continuous Learning:** Mastering advanced statistical modeling, Bayes' theorem, hypothesis testing, and machine learning architectures from foundational data science coursework.")
+
+    with col_p4:
+        st.image(
+            "Guma_Passport_Photo.JPG",
+            use_container_width=True,
+            caption="Guma Adolf | Founder & Data Scientist",
+        )
+        st.markdown("**Vision & Leadership:** Directing enterprise digital transformation, bridging heavy operational logistics with modern predictive data science.")
+
+    st.markdown("---")
     st.markdown("### 📊 Live Operational Control Preview")
     st.text("Inventory Accuracy (Target: >85%)")
     st.progress(86)
