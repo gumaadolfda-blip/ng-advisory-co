@@ -192,7 +192,7 @@ elif section == "Foundational Pharmacy BI":
         "**Project Type:** Foundational Business Intelligence & Regional Geographic Mapping (February 2026)"
     )
     st.write(
-        "**Scope:** Early exploratory reporting mapping out multi-region pharmacy sales performance across the UAE[cite: 13], tracking product-level profitability for key medical commodities[cite: 13], and establishing foundational data visualization frameworks."
+        "**Scope:** Early exploratory reporting mapping out multi-region pharmacy sales performance across the UAE, tracking product-level profitability for key medical commodities, and establishing foundational data visualization frameworks."
     )
 
     st.markdown("---")
@@ -205,15 +205,15 @@ elif section == "Foundational Pharmacy BI":
         use_container_width=True,
         caption=(
             "Foundational Power BI Report (Feb 2026) | Regional UAE Geographic"
-            " Mapping & Product Profitability Metrics[cite: 13]"
+            " Mapping & Product Profitability Metrics"
         ),
     )
 
     st.markdown("---")
     st.subheader("Key Takeaways & Evolution")
     st.markdown("""
-    * **Geographic Mapping Foundations:** Utilized built-in Power BI mapping tools to anchor multi-hub performance across UAE coordinates[cite: 13].
-    * **Product Profitability Breakdown:** Analyzed sales distribution using clear card visuals, pie charts, and bar distributions to isolate high-performing inventory items[cite: 13].
+    * **Geographic Mapping Foundations:** Utilized built-in Power BI mapping tools to anchor multi-hub performance across UAE coordinates.
+    * **Product Profitability Breakdown:** Analyzed sales distribution using clear card visuals, pie charts, and bar distributions to isolate high-performing inventory items.
     * **The Compounding Journey:** Serving as an early milestone in data visualization before scaling into advanced Python automation, SQL querying, and enterprise risk modeling under NG Advisory Co.
     """)
 
@@ -225,7 +225,7 @@ elif section == "Foundational Logistics BI":
         "**Project Type:** Supply Chain Visibility & Route Performance Dashboard (February 2026)"
     )
     st.write(
-        "**Scope:** Operational intelligence dashboard tracking multi-hub freight distribution, delivery statuses (Delayed, Delivered, On-Time), and product-category weights across UAE transport routes[cite: 12]."
+        "**Scope:** Operational intelligence dashboard tracking multi-hub freight distribution, delivery statuses (Delayed, Delivered, On-Time), and product-category weights across UAE transport routes."
     )
 
     st.markdown("---")
@@ -234,49 +234,49 @@ elif section == "Foundational Logistics BI":
     )
 
     st.image(
-        "logistics .png",
+        "WhatsApp Image 2026-09-07 at 10.58.10AM.jpeg",
         use_container_width=True,
         caption=(
             "Foundational Logistics Report (Feb 2026) | UAE Route Mapping,"
-            " Freight Costs & Status Tracking[cite: 12]"
+            " Freight Costs & Status Tracking"
         ),
     )
 
     st.markdown("---")
     st.subheader("Key Takeaways & Operational Value")
     st.markdown("""
-    * **Route Status Monitoring:** Visualized live destination tracking to isolate delivery exceptions and operational delays across the UAE[cite: 12].
-    * **Weight & Category Allocation:** Evaluated freight distribution across heavy categories like Construction, Electrical, and Pharmacy supply chains[cite: 12].
+    * **Route Status Monitoring:** Visualized live destination tracking to isolate delivery exceptions and operational delays across the UAE.
+    * **Weight & Category Allocation:** Evaluated freight distribution across heavy categories like Construction, Electrical, and Pharmacy supply chains.
     * **Operational Foundation:** Demonstrates deep domain familiarity with real-world freight handling before expanding into predictive Python simulation models.
     """)
 
 elif section == "Foundational Retail Sales BI":
     st.header("🛒 Foundational Case Study: Retail Sales Dashboard (Power BI)")
     st.write(
-        "**Project Type:** Commercial Retail Analytics & Revenue Intelligence (March 2026)[cite: 11]"
+        "**Project Type:** Commercial Retail Analytics & Revenue Intelligence (March 2026)"
     )
     st.write(
-        "**Scope:** Early commercial sales report analyzing AED 456,000 in total revenue across product categories (Electronics, Clothing, Beauty) with interactive date slicers and gender demographic filtering[cite: 11]."
+        "**Scope:** Early commercial sales report analyzing AED 456,000 in total revenue across product categories (Electronics, Clothing, Beauty) with interactive date slicers and gender demographic filtering."
     )
 
     st.markdown("---")
     st.subheader("My_First_Retail_Dashboard_Final Dashboard Preview")
 
     st.image(
-        "my.png",
+        "WhatsApp Image 2026-09-07 at 10.58.22AM.jpeg",
         use_container_width=True,
         caption=(
             "Foundational Retail Sales Report (Mar 2026) | AED 456K Total Sales,"
-            " Category Breakdown & Demographic Slicers[cite: 11]"
+            " Category Breakdown & Demographic Slicers"
         ),
     )
 
     st.markdown("---")
     st.subheader("Key Takeaways & Commercial Insights")
     st.markdown("""
-    * **Revenue Tracking:** Centralized total sales performance (AED 456,000) using executive KPI card visuals[cite: 11].
-    * **Multi-Category Distribution:** Assessed revenue split across Electronics, Clothing, and Beauty sectors via dynamic pie and column charts[cite: 11].
-    * **Interactive Slicing:** Integrated date timeline controls (`1/1/2023` to `1/1/2024`) and gender filters to enable targeted commercial data discovery[cite: 11].
+    * **Revenue Tracking:** Centralized total sales performance (AED 456,000) using executive KPI card visuals.
+    * **Multi-Category Distribution:** Assessed revenue split across Electronics, Clothing, and Beauty sectors via dynamic pie and column charts.
+    * **Interactive Slicing:** Integrated date timeline controls (`1/1/2023` to `1/1/2024`) and gender filters to enable targeted commercial data discovery.
     """)
 
 elif section == "Seoul Bike Rentals Analytics":
@@ -285,27 +285,26 @@ elif section == "Seoul Bike Rentals Analytics":
         "**Project Type:** Time-Series & Demand Distribution Analysis (Tableau Public)"
     )
     st.write(
-        "**Scope:** Comprehensive temporal exploration of public bike-sharing usage across weekdays, hours, and seasonal variations to identify peak transit windows and low-traffic operational lulls[cite: 14]."
+        "**Scope:** Comprehensive temporal exploration of public bike-sharing usage across weekdays, hours, and seasonal variations to identify peak transit windows and low-traffic operational lulls."
     )
 
     st.markdown("---")
     st.subheader("Weekday & Hourly Demand Patterns")
 
     st.image(
-        "09-10 at 10.36.28 AM.jpeg",
+        "WhatsApp Image 2026-09-07 at 10.58.27 AM.jpeg",
         use_container_width=True,
         caption=(
-            "Seoul Average Bike Rentals per Hour on Weekdays (2018) | Peak Commute"
-            " Hours & Low-Traffic Windows[cite: 14]"
+            "Seoul Average Bike Rentals per Hour on Weekdays (2018) | Peak Commute Hours & Low-Traffic Windows"
         ),
     )
 
     st.markdown("---")
     st.subheader("Key Analytical Insights")
     st.markdown("""
-    * **Commuter Peaks:** Identified sharp morning and evening rental spikes corresponding to weekday transit habits[cite: 14].
-    * **Maintenance Windows:** Pinpointed low-demand operational windows (such as 9 AM to 3 PM) ideal for bike redistribution and fleet servicing[cite: 14].
-    * **Gradient Visual Encoding:** Utilized color-mapped density bars (`SUM(Rented Bike Count)`) to instantly highlight high-volume hours[cite: 14].
+    * **Commuter Peaks:** Identified sharp morning and evening rental spikes corresponding to weekday transit habits.
+    * **Maintenance Windows:** Pinpointed low-demand operational windows (such as 9 AM to 3 PM) ideal for bike redistribution and fleet servicing.
+    * **Gradient Visual Encoding:** Utilized color-mapped density bars (`SUM(Rented Bike Count)`) to instantly highlight high-volume hours.
     """)
 
 elif section == "US Wildlife & Bird Strikes Analytics":
@@ -314,26 +313,26 @@ elif section == "US Wildlife & Bird Strikes Analytics":
         "**Project Type:** Spatial Density Mapping & Multi-Year Strike Trend Analysis (Tableau Public)"
     )
     st.write(
-        "**Scope:** Large-scale analysis of aviation safety incident records, mapping spatial strike concentrations across US coordinates and examining multi-year volume trajectories[cite: 15, 16, 20]."
+        "**Scope:** Large-scale analysis of aviation safety incident records, mapping spatial strike concentrations across US coordinates and examining multi-year volume trajectories."
     )
 
     st.markdown("---")
     st.subheader("Geographic Density & Multi-Year Incident Trends")
 
     st.image(
-        "WhatsApp Image 2026-09-07.jpeg",
+        "WhatsApp Image 2026-09-07 at 10.58.29AM.jpeg",
         use_container_width=True,
         caption=(
-            "US Wildlife Strike Density Mapping & Temporal Incident Trends (2016–2018)[cite: 16, 20]"
+            "US Wildlife Strike Density Mapping & Temporal Incident Trends (2016–2018)"
         ),
     )
 
     st.markdown("---")
     st.subheader("Key Takeaways & Safety Intelligence")
     st.markdown("""
-    * **Spatial Risk Mapping:** Deployed density-based geographic maps to identify high-concentration collision zones across regional flight paths[cite: 16].
-    * **Longitudinal Trends:** Tracked annual strike fluctuations between 2016 and 2018 to evaluate safety intervention outcomes[cite: 20].
-    * **Aviation Logistics Relevance:** Demonstrates advanced capability in handling complex, multi-million record safety datasets for operational risk mitigation[cite: 15, 18].
+    * **Spatial Risk Mapping:** Deployed density-based geographic maps to identify high-concentration collision zones across regional flight paths.
+    * **Longitudinal Trends:** Tracked annual strike fluctuations between 2016 and 2018 to evaluate safety intervention outcomes.
+    * **Aviation Logistics Relevance:** Demonstrates advanced capability in handling complex, multi-million record safety datasets for operational risk mitigation.
     """)
 
 elif section == "Remote Case Study: ROA":
