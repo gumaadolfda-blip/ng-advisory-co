@@ -151,7 +151,7 @@ if section == "Home & Overview":
         st.image(
             "office.jpeg",
             use_container_width=True,
-            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment[cite: 30]",
+            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment",
         )
     with col_env2:
         st.image(
@@ -181,13 +181,13 @@ elif section == "Superstore Supply Chain & Profitability":
         st.image(
             "Screenshot 2026-07-01 095504.png",
             use_container_width=True,
-            caption="Superstore Executive View | Sales Revenue & Segment Margins[cite: 37]",
+            caption="Superstore Executive View | Sales Revenue & Segment Margins",
         )
     with col_sup2:
         st.image(
             "Screenshot 2026-07-01 095527.png",
             use_container_width=True,
-            caption="Average Days to Ship by Ship Mode[cite: 38]",
+            caption="Average Days to Ship by Ship Mode",
         )
 
     st.markdown("---")
@@ -195,7 +195,7 @@ elif section == "Superstore Supply Chain & Profitability":
     st.image(
         "Screenshot 2026-02-27 071707.png",
         use_container_width=True,
-        caption="Sum of Price, Total Revenue, and Units by Product Category[cite: 31]",
+        caption="Sum of Price, Total Revenue, and Units by Product Category",
     )
 
 elif section == "Global Logistics & Risk Intelligence":
@@ -213,13 +213,13 @@ elif section == "Global Logistics & Risk Intelligence":
         st.image(
             "Screenshot 2026-03-12 221148.png",
             use_container_width=True,
-            caption="Global Supply Chain Dashboard with Risk Slider & Mapping[cite: 35]",
+            caption="Global Supply Chain Dashboard with Risk Slider & Mapping",
         )
     with col_log2:
         st.image(
             "powerbi.png",
             use_container_width=True,
-            caption="Shipment Performance Dashboard | Geospatial Risk & Route Analysis[cite: 23]",
+            caption="Shipment Performance Dashboard | Geospatial Risk & Route Analysis",
         )
 
     st.markdown("---")
@@ -229,13 +229,13 @@ elif section == "Global Logistics & Risk Intelligence":
         st.image(
             "logistics .png",
             use_container_width=True,
-            caption="Logistics Performance Overview (Feb 2026)[cite: 7]",
+            caption="Logistics Performance Overview (Feb 2026)",
         )
     with col_lsub2:
         st.image(
             "Screenshot 2026-02-28 093719.jpg",
             use_container_width=True,
-            caption="Detailed UAE Freight Cost & Status Breakdown[cite: 34]",
+            caption="Detailed UAE Freight Cost & Status Breakdown",
         )
 
 elif section == "Global CO2 Emissions Analytics":
@@ -270,13 +270,13 @@ elif section == "UAE Energy & Carbon Monoxide Engineering":
         st.image(
             "Screenshot proje1.png",
             use_container_width=True,
-            caption="UAE Energy Commodities Dashboard - Executive Overview[cite: 26]",
+            caption="UAE Energy Commodities Dashboard - Executive Overview",
         )
     with col_e2:
         st.image(
             "Screenshot proje2.png",
             use_container_width=True,
-            caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping[cite: 27]",
+            caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping",
         )
 
     I = st.markdown("---")
@@ -286,23 +286,23 @@ elif section == "UAE Energy & Carbon Monoxide Engineering":
         st.image(
             "chart.png",
             use_container_width=True,
-            caption="Average CO Concentration by Emirate (2006–2016)[cite: 19]",
+            caption="Average CO Concentration by Emirate (2006–2016)",
         )
         st.image(
             "plot.png",
             use_container_width=True,
-            caption="UAE Annual Average Carbon Monoxide Trends[cite: 21]",
+            caption="UAE Annual Average Carbon Monoxide Trends",
         )
     with col_c2:
         st.image(
             "final.png",
             use_container_width=True,
-            caption="Average CO Concentration by Location Type[cite: 20]",
+            caption="Average CO Concentration by Location Type",
         )
         st.image(
             "plot2.png",
             use_container_width=True,
-            caption="Statistical Summary Table: CO by Location Type[cite: 22]",
+            caption="Statistical Summary Table: CO by Location Type",
         )
 
 elif section == "Remote Case Study: ROA":
@@ -338,7 +338,7 @@ elif section == "Tableau Public & Wildlife Analytics":
     st.image(
         "WhatsApp Image 2026-09-12 at 8.55.09 AM.jpeg",
         use_container_width=True,
-        caption="Tableau Public Creator Profile | Published Vizzes Showcase[cite: 29]",
+        caption="Tableau Public Creator Profile | Published Vizzes Showcase",
     )
 
     st.markdown("---")
@@ -348,23 +348,23 @@ elif section == "Tableau Public & Wildlife Analytics":
         st.image(
             "WhatsApp Image 2026-09-07 at 10.58.27 AM.jpeg",
             use_container_width=True,
-            caption="Wildlife Strike Frequency Bins (Tableau)[cite: 13]",
+            caption="Wildlife Strike Frequency Bins (Tableau)",
         )
         st.image(
             "WhatsApp Image 2026-09-07.jpeg",
             use_container_width=True,
-            caption="Sum of Number of Strikes Trend Line (2016–2018)[cite: 15]",
+            caption="Sum of Number of Strikes Trend Line (2016–2018)",
         )
     with col_wld2:
         st.image(
             "WhatsApp Image 2026-09-07 at 10.58.29AM.jpeg",
             use_container_width=True,
-            caption="US Spatial Density Incident Mapping[cite: 14]",
+            caption="US Spatial Density Incident Mapping",
         )
         st.image(
             "09-10 at 10.36.28 AM.jpeg",
             use_container_width=True,
-            caption="Seoul Bike Rentals Time-Series Analysis[cite: 9]",
+            caption="Seoul Bike Rentals Time-Series Analysis",
         )
 
 elif section == "Weather & Lightning Risk Analysis":
@@ -382,7 +382,7 @@ elif section == "Weather & Lightning Risk Analysis":
         st.image(
             "Screenshot 2026-08-23 081053[1].png",
             use_container_width=True,
-            caption="Lightning Distribution per Weekday (2018)[cite: 24]",
+            caption="Lightning Distribution per Weekday (2018)",
         )
     with col_ltg2:
         st.image(
@@ -406,12 +406,12 @@ elif section == "Foundational BI Suite (Pharmacy & Retail)":
         st.image(
             "feb.png",
             use_container_width=True,
-            caption="Regional UAE Geographic Mapping & Product Profitability[cite: 8]",
+            caption="Regional UAE Geographic Mapping & Product Profitability",
         )
         st.image(
             "Screenshot 2026-02-27 073605.png",
             use_container_width=True,
-            caption="Pharmacy Sales Dashboard Detailed View[cite: 32]",
+            caption="Pharmacy Sales Dashboard Detailed View",
         )
 
     with tab_f2:
@@ -419,12 +419,12 @@ elif section == "Foundational BI Suite (Pharmacy & Retail)":
         st.image(
             "my.png",
             use_container_width=True,
-            caption="AED 456K Total Sales, Category Breakdown & Demographic Slicers[cite: 6]",
+            caption="AED 456K Total Sales, Category Breakdown & Demographic Slicers",
         )
         st.image(
             "WhatsApp Image 2026-09-07 at 10.58.22AM.jpeg",
             use_container_width=True,
-            caption="Retail Sales Distribution & Date Filtering[cite: 10]",
+            caption="Retail Sales Distribution & Date Filtering",
         )
 
     with tab_f3:
@@ -432,7 +432,7 @@ elif section == "Foundational BI Suite (Pharmacy & Retail)":
         st.image(
             "WhatsApp Image 2026-09-07 at 10.58.10AM.jpeg",
             use_container_width=True,
-            caption="Logistics Performance Overview Map & Weights[cite: 10]",
+            caption="Logistics Performance Overview Map & Weights",
         )
 
 elif section == "Data Products & Risk Simulation":
