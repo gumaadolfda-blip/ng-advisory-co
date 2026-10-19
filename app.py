@@ -19,7 +19,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Bulletproof helper function that checks all common extensions (.png, .jpg, .JPG) automatically
+# Bulletproof helper function that checks all common extensions automatically
 def display_image_safely(base_names, caption=""):
     found = False
     if isinstance(base_names, str):
@@ -39,7 +39,6 @@ def display_image_safely(base_names, caption=""):
             break
             
     if not found:
-        # Fallback to office or passport photo if specific asset is missing
         if os.path.exists("office.jpeg"):
             st.image("office.jpeg", caption=caption, use_container_width=True)
         elif os.path.exists("Guma_Passport_Photo.JPG"):
@@ -72,8 +71,6 @@ menu_selection = st.sidebar.radio(
 # 1. HOME / OVERVIEW SECTION
 # ==========================================
 if menu_selection == "🏠 Home / Overview":
-    
-    # Hero Section with Passport Photo & Executive Introduction
     col_img, col_text = st.columns([1, 2.5], gap="medium")
     
     with col_img:
@@ -89,7 +86,6 @@ if menu_selection == "🏠 Home / Overview":
     
     st.markdown("---")
     
-    # Four Executive Visual Assets Showcase Gallery
     st.markdown("### 🖥️ Executive Command Center & Professional Gallery")
     st.markdown("Explore the operational environments and professional milestones driving NG Advisory Co.:")
     
@@ -113,7 +109,6 @@ if menu_selection == "🏠 Home / Overview":
 
     st.markdown("---")
     
-    # Core Value Proposition / Methodology
     st.markdown("""
     ### 🚀 The NG Advisory Methodology: From Coursework to Control
     Every analytical framework we build—whether through advanced Python pipelines, statistical modeling, or business intelligence—is engineered to solve real-world operational bottlenecks:
@@ -191,7 +186,7 @@ elif menu_selection == "🧪 Advanced Python & SciPy (ROA AQI)":
 elif menu_selection == "🌍 Global CO2 Emissions Dashboard":
     st.title("🌍 Global CO2 Emissions & Sustainability Analytics")
     st.markdown("Interactive dark-theme analytics tracking global carbon output, country-level slicers, and emissions reduction trajectories.")
-    display_image_safely(["chart.png", "plot.png"])
+    display_image_safely(["chart.png", "plot.png"], caption="Global Carbon Emissions & Country-Level Slicers")
 
 # ==========================================
 # 5. UAE ENERGY & CARBON MONOXIDE
@@ -199,6 +194,7 @@ elif menu_selection == "🌍 Global CO2 Emissions Dashboard":
 elif menu_selection == "⚡ UAE Energy & Carbon Monoxide":
     st.title("⚡ UAE Energy & Carbon Monoxide Engineering")
     st.markdown("Engineering telemetry analysis covering regional air quality indices, emissions monitoring, and industrial safety thresholds across the Emirates.")
+    display_image_safely(["09-10 at 10.36.28 AM.jpeg", "chart.png"], caption="UAE Energy Telemetry & Carbon Monoxide Monitoring")
 
 # ==========================================
 # 6. FOUNDATIONAL BI SUITE
@@ -221,7 +217,7 @@ elif menu_selection == "📈 Foundational BI Suite (Retail, Pharmacy, Logistics)
 elif menu_selection == "🗺️ Tableau Public & Wildlife Safety":
     st.title("🗺️ Tableau Public & Wildlife Safety Analytics")
     st.markdown("Visual storytelling dashboards hosted on Tableau Public, integrating spatial safety metrics and incident risk mapping.")
-    display_image_safely(["final.png", "my.png"])
+    display_image_safely(["final.png", "my.png"], caption="Tableau Public Wildlife Safety & Spatial Incident Dashboard")
 
 # ==========================================
 # 8. WEATHER & LIGHTNING RISK
@@ -229,6 +225,7 @@ elif menu_selection == "🗺️ Tableau Public & Wildlife Safety":
 elif menu_selection == "🌦️ Weather & Lightning Risk":
     st.title("🌦️ Weather & Lightning Risk Intelligence")
     st.markdown("Predictive analytics mapping environmental hazards against transit schedules to preemptively divert logistics operations.")
+    display_image_safely(["Screenshot 2026-02-28 091817.png", "Screenshot proje2.png"], caption="Weather Hazard & Transit Route Risk Mapping")
 
 # ==========================================
 # 9. ADVISORY FRAMEWORK & DATA PRODUCTS
@@ -238,7 +235,9 @@ elif menu_selection == "💡 Advisory Framework & Data Products":
     st.markdown("""
     ### Strategic Consulting Methodologies
     NG Advisory Co. helps organizations transition from reactive reporting to proactive operational control.
-    
+    """)
+    display_image_safely(["a_Change_the_words_on_.png", "Screenshot 2026-03-12 221148.png"], caption="NG Advisory Strategy & Consulting Framework")
+    st.markdown("""
     * **Audit & Assess:** Comprehensive evaluation of enterprise data pipelines.
     * **Model & Predict:** Deploying Python-backed statistical risk engines.
     * **Execute & Control:** Closing the loop between insights and ground-level operational execution.
