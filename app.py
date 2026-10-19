@@ -78,13 +78,11 @@ section = st.sidebar.radio(
     "Navigation",
     [
         "Home & Overview",
-        "UAE Energy Supply Analytics",
-        "Foundational Pharmacy BI",
-        "Foundational Logistics BI",
-        "Foundational Retail Sales BI",
-        "Seoul Bike Rentals Analytics",
-        "US Wildlife & Bird Strikes Analytics",
+        "UAE Energy Supply & CO Analytics",
+        "Shipment Performance & Risk BI",
         "Remote Case Study: ROA",
+        "Weather & Lightning Risk Analysis",
+        "Foundational BI Suite",
         "Data Products & Risk Simulation",
         "Advisory Framework",
     ],
@@ -157,182 +155,77 @@ if section == "Home & Overview":
     st.text("SOP Compliance & Governance")
     st.progress(92)
 
-elif section == "UAE Energy Supply Analytics":
-    st.header("⚡ UAE Energy Supply Evolution & Sector Analytics (2008–2021)")
+elif section == "UAE Energy Supply & CO Analytics":
+    st.header("⚡ UAE Energy Commodities & Carbon Monoxide Analytics")
     st.write(
-        "**Project Type:** Exploratory Data Analysis & Python Data Engineering Pipeline"
+        "**Project Type:** Python Data Engineering & Power BI Executive Dashboard Suite"
     )
     st.write(
-        "**Scope:** Comprehensive multi-sector examination of energy commodities across the United Arab Emirates using Pandas, NumPy, Seaborn, and Matplotlib."
+        "**Scope:** Comprehensive multi-sector examination of UAE energy commodities and historical Carbon Monoxide (CO) concentration trends across emirates and location types (2006–2021)."
     )
 
     st.markdown("---")
-    st.subheader("Key Analytical Findings & Methodology")
+    st.subheader("1. Power BI Executive Overview & Commodity Deep Dive")
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("""
-            **1. Data Hygiene & Cleaning Pipeline**
-            * Methodically standardized column names and removed trailing whitespaces.
-            * Handled missing value imputation and isolated summary rows by filtering `df.dropna(subset=['Year'])`.
-            * Converted historical date indicators into clean integer time-series arrays.
-            """)
+        st.image(
+            "Screenshot proje1.png",
+            use_container_width=True,
+            caption="UAE Energy Commodities Dashboard - Executive Overview[cite: 28]",
+        )
     with col2:
-        st.markdown("""
-            **2. Advanced Statistical Visualization**
-            * Deployed Seaborn boxplots with `hue` parameter mapping to profile distribution spreads and outliers.
-            * Utilized faceted multi-panel line plots (`sns.relplot`) with independent Y-axes (`sharey=False`) to clearly isolate sector-specific trajectories.
-            """)
+        st.image(
+            "Screenshot proje2.png",
+            use_container_width=True,
+            caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping[cite: 29]",
+        )
 
-elif section == "Foundational Pharmacy BI":
-    st.header(
-        "📈 Foundational Case Study: UAE Pharmacy Sales Analysis (Power BI)"
+    st.markdown("---")
+    st.subheader("2. Python Jupyter Notebook: Carbon Monoxide (CO) Analysis")
+
+    col_py1, col_py2 = st.columns(2)
+    with col_py1:
+        st.image(
+            "chart.png",
+            use_container_width=True,
+            caption="Average CO Concentration by Emirate (2006–2016)[cite: 21]",
+        )
+    with col_py2:
+        st.image(
+            "final.png",
+            use_container_width=True,
+            caption=(
+                "Average CO Concentration by Location Type (Beside Road vs."
+                " Industrial)[cite: 22]"
+            ),
+        )
+
+elif section == "Shipment Performance & Risk BI":
+    st.header("📦 Enterprise Shipment Performance & Risk Intelligence")
+    st.write(
+        "**Project Type:** Advanced Power BI Supply Chain Control Dashboard"
     )
     st.write(
-        "**Project Type:** Foundational Business Intelligence & Regional Geographic Mapping (February 2026)"
-    )
-    st.write(
-        "**Scope:** Early exploratory reporting mapping out multi-region pharmacy sales performance across the UAE, tracking product-level profitability for key medical commodities, and establishing foundational data visualization frameworks."
+        "**Scope:** Multi-tab analytics engine tracking shipment status, transit times, origin/destination country flows, and automated late-delivery risk scores."
     )
 
     st.markdown("---")
-    st.subheader(
-        "Pharmacy_Sales_Analysis_FEB2026_Full_Report_2 Dashboard Preview"
-    )
-
     st.image(
-        "feb.png",
+        "powerbi.png",
         use_container_width=True,
         caption=(
-            "Foundational Power BI Report (Feb 2026) | Regional UAE Geographic"
-            " Mapping & Product Profitability Metrics"
+            "Shipment Performance Dashboard | Executive Overview, Geospatial"
+            " Risk Mapping & Route Analysis[cite: 25]"
         ),
     )
 
     st.markdown("---")
-    st.subheader("Key Takeaways & Evolution")
+    st.subheader("Core Operational Metrics")
     st.markdown("""
-    * **Geographic Mapping Foundations:** Utilized built-in Power BI mapping tools to anchor multi-hub performance across UAE coordinates.
-    * **Product Profitability Breakdown:** Analyzed sales distribution using clear card visuals, pie charts, and bar distributions to isolate high-performing inventory items.
-    * **The Compounding Journey:** Serving as an early milestone in data visualization before scaling into advanced Python automation, SQL querying, and enterprise risk modeling under NG Advisory Co.
-    """)
-
-elif section == "Foundational Logistics BI":
-    st.header(
-        "🚚 Foundational Case Study: UAE Logistics Performance Overview (Power BI)"
-    )
-    st.write(
-        "**Project Type:** Supply Chain Visibility & Route Performance Dashboard (February 2026)"
-    )
-    st.write(
-        "**Scope:** Operational intelligence dashboard tracking multi-hub freight distribution, delivery statuses (Delayed, Delivered, On-Time), and product-category weights across UAE transport routes."
-    )
-
-    st.markdown("---")
-    st.subheader(
-        "Logistics Performance Overview-February 2026 Dashboard Preview"
-    )
-
-    st.image(
-        "WhatsApp Image 2026-09-07 at 10.58.10AM.jpeg",
-        use_container_width=True,
-        caption=(
-            "Foundational Logistics Report (Feb 2026) | UAE Route Mapping,"
-            " Freight Costs & Status Tracking"
-        ),
-    )
-
-    st.markdown("---")
-    st.subheader("Key Takeaways & Operational Value")
-    st.markdown("""
-    * **Route Status Monitoring:** Visualized live destination tracking to isolate delivery exceptions and operational delays across the UAE.
-    * **Weight & Category Allocation:** Evaluated freight distribution across heavy categories like Construction, Electrical, and Pharmacy supply chains.
-    * **Operational Foundation:** Demonstrates deep domain familiarity with real-world freight handling before expanding into predictive Python simulation models.
-    """)
-
-elif section == "Foundational Retail Sales BI":
-    st.header("🛒 Foundational Case Study: Retail Sales Dashboard (Power BI)")
-    st.write(
-        "**Project Type:** Commercial Retail Analytics & Revenue Intelligence (March 2026)"
-    )
-    st.write(
-        "**Scope:** Early commercial sales report analyzing AED 456,000 in total revenue across product categories (Electronics, Clothing, Beauty) with interactive date slicers and gender demographic filtering."
-    )
-
-    st.markdown("---")
-    st.subheader("My_First_Retail_Dashboard_Final Dashboard Preview")
-
-    st.image(
-        "WhatsApp Image 2026-09-07 at 10.58.22AM.jpeg",
-        use_container_width=True,
-        caption=(
-            "Foundational Retail Sales Report (Mar 2026) | AED 456K Total Sales,"
-            " Category Breakdown & Demographic Slicers"
-        ),
-    )
-
-    st.markdown("---")
-    st.subheader("Key Takeaways & Commercial Insights")
-    st.markdown("""
-    * **Revenue Tracking:** Centralized total sales performance (AED 456,000) using executive KPI card visuals.
-    * **Multi-Category Distribution:** Assessed revenue split across Electronics, Clothing, and Beauty sectors via dynamic pie and column charts.
-    * **Interactive Slicing:** Integrated date timeline controls (`1/1/2023` to `1/1/2024`) and gender filters to enable targeted commercial data discovery.
-    """)
-
-elif section == "Seoul Bike Rentals Analytics":
-    st.header("🚲 Tableau Analytics: Seoul Bike Rentals (2018)")
-    st.write(
-        "**Project Type:** Time-Series & Demand Distribution Analysis (Tableau Public)"
-    )
-    st.write(
-        "**Scope:** Comprehensive temporal exploration of public bike-sharing usage across weekdays, hours, and seasonal variations to identify peak transit windows and low-traffic operational lulls."
-    )
-
-    st.markdown("---")
-    st.subheader("Weekday & Hourly Demand Patterns")
-
-    st.image(
-        "WhatsApp Image 2026-09-07 at 10.58.27 AM.jpeg",
-        use_container_width=True,
-        caption=(
-            "Seoul Average Bike Rentals per Hour on Weekdays (2018) | Peak Commute Hours & Low-Traffic Windows"
-        ),
-    )
-
-    st.markdown("---")
-    st.subheader("Key Analytical Insights")
-    st.markdown("""
-    * **Commuter Peaks:** Identified sharp morning and evening rental spikes corresponding to weekday transit habits.
-    * **Maintenance Windows:** Pinpointed low-demand operational windows (such as 9 AM to 3 PM) ideal for bike redistribution and fleet servicing.
-    * **Gradient Visual Encoding:** Utilized color-mapped density bars (`SUM(Rented Bike Count)`) to instantly highlight high-volume hours.
-    """)
-
-elif section == "US Wildlife & Bird Strikes Analytics":
-    st.header("🦅 Tableau Analytics: US Wildlife & Bird Strikes (2016–2018)")
-    st.write(
-        "**Project Type:** Spatial Density Mapping & Multi-Year Strike Trend Analysis (Tableau Public)"
-    )
-    st.write(
-        "**Scope:** Large-scale analysis of aviation safety incident records, mapping spatial strike concentrations across US coordinates and examining multi-year volume trajectories."
-    )
-
-    st.markdown("---")
-    st.subheader("Geographic Density & Multi-Year Incident Trends")
-
-    st.image(
-        "WhatsApp Image 2026-09-07 at 10.58.29AM.jpeg",
-        use_container_width=True,
-        caption=(
-            "US Wildlife Strike Density Mapping & Temporal Incident Trends (2016–2018)"
-        ),
-    )
-
-    st.markdown("---")
-    st.subheader("Key Takeaways & Safety Intelligence")
-    st.markdown("""
-    * **Spatial Risk Mapping:** Deployed density-based geographic maps to identify high-concentration collision zones across regional flight paths.
-    * **Longitudinal Trends:** Tracked annual strike fluctuations between 2016 and 2018 to evaluate safety intervention outcomes.
-    * **Aviation Logistics Relevance:** Demonstrates advanced capability in handling complex, multi-million record safety datasets for operational risk mitigation.
+    * **Transit Time Optimization:** Tracking average transit duration (15.38 days) to identify route bottlenecks[cite: 25].
+    * **Risk Flagging:** Automated risk scoring and late-shipment monitoring across international corridors (USA, Germany, Japan, China, Brazil, UK)[cite: 25].
+    * **Transport Mode Distribution:** Splitting logistics volume across Air, Sea, and Land transport channels[cite: 25].
     """)
 
 elif section == "Remote Case Study: ROA":
@@ -345,53 +238,92 @@ elif section == "Remote Case Study: ROA":
     )
 
     st.markdown("---")
-    st.subheader("Executive Summary & Hypothesis Testing Pipeline")
+    st.subheader("Exploratory Data Analysis: State-Level AQI Distribution")
     st.write(
-        "Executed rigorous statistical evaluations using Python and SciPy (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var = False`) to account for unequal variances across regional populations at a 5% level of significance (alpha = 0.05)."
+        "Utilized Seaborn boxplots (`sns.boxplot`) to profile AQI distributions, isolate skewness, and flag extreme metropolitan outliers across key state jurisdictions prior to formal Welch's t-test evaluations."
     )
 
-    tab_roa1, tab_roa2, tab_roa3 = st.tabs(
-        [
-            "1. California Metro Focus",
-            "2. Regional Office Site Selection",
-            "3. Regulatory Policy Test",
-        ]
+    st.image(
+        "California .png",
+        use_container_width=True,
+        caption=(
+            "Seaborn Boxplot Analysis | State-Level AQI Distribution, Spread,"
+            " and Outlier Detection (California vs. National Peers)[cite: 20]"
+        ),
     )
 
-    with tab_roa1:
-        st.markdown("### California Metropolitan Disparity Analysis")
-        st.write(
-            "**Objective:** Determine if the mean AQI in Los Angeles County is statistically different from the rest of California."
+    st.markdown("---")
+    st.subheader(
+        "Executive Summary & Hypothesis Testing Pipeline (alpha = 0.05)"
+    )
+    st.write(
+        "Executed rigorous statistical evaluations using Python and SciPy (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var = False`) to account for unequal variances across regional populations."
+    )
+
+elif section == "Weather & Lightning Risk Analysis":
+    st.header("⚡ Environmental Risk: Weather & Lightning Strike Analytics")
+    st.write(
+        "**Project Type:** Exploratory Time-Series & Statistical Distribution Analysis"
+    )
+    st.write(
+        "**Scope:** Examining temporal weather volatility, weekday distributions, and seasonal percentage concentrations of lightning and storm strikes."
+    )
+
+    st.markdown("---")
+    col_w1, col_w2 = st.columns(2)
+    with col_w1:
+        st.image(
+            "Screenshot 2026-08-23 081053[1].png",
+            use_container_width=True,
+            caption="Lightning Distribution per Weekday (2018)[cite: 26]",
         )
-        st.info(
-            "**Methodology:** Two-sample Welch's t-test comparing LA County against non-metro California (alpha = 0.05)."
-        )
-        st.success(
-            "**Strategic Recommendation:** Deployed targeted urban mitigation strategies for LA County based on verified statistical divergence."
+    with col_w2:
+        st.image(
+            "Screenshot 2026-08-23 081139[2].png",
+            use_container_width=True,
+            caption=(
+                "Monthly Percentage Concentration of Lightning Strikes"
+                " (2016–2018)[cite: 27]"
+            ),
         )
 
-    with tab_roa2:
-        st.markdown("### Regional Office Site Selection (New York vs. Ohio)")
-        st.write(
-            "**Objective:** Does New York have a lower AQI than Ohio for ROA's next regional hub under resource constraints?"
-        )
-        st.info(
-            "**Methodology:** Independent t-test evaluating mean AQI differences between NY and OH datasets."
-        )
-        st.success(
-            "**Strategic Recommendation:** Provided data-backed site selection guidance for optimal operational placement."
+elif section == "Foundational BI Suite":
+    st.header("📈 Foundational Business Intelligence Suite")
+    st.write(
+        "**Project Type:** Early Commercial, Pharmacy, and Logistics Power BI Reports"
+    )
+    st.write(
+        "**Scope:** Milestone reporting establishing core competencies in data modeling, DAX measures, geospatial mapping, and commercial dashboard design."
+    )
+
+    tab_f1, tab_f2, tab_f3 = st.tabs(
+        ["Pharmacy Sales BI", "Logistics Performance BI", "Retail Sales BI"]
+    )
+
+    with tab_f1:
+        st.subheader("UAE Pharmacy Sales Analysis (Feb 2026)")
+        st.image(
+            "feb.png",
+            use_container_width=True,
+            caption="Regional UAE Geographic Mapping & Product Profitability",
         )
 
-    with tab_roa3:
-        st.markdown("### State Regulatory Compliance (Michigan)")
-        st.write(
-            "**Objective:** Assess whether Michigan's air quality meets or exceeds the federal threshold of a mean AQI of 10 or greater."
+    with tab_f2:
+        st.subheader("Logistics Performance Overview (Feb 2026)")
+        st.image(
+            "logistics .png",
+            use_container_width=True,
+            caption="UAE Route Mapping, Freight Costs & Status Tracking",
         )
-        st.info(
-            "**Methodology:** Hypothesis testing evaluating sample mean AQI against threshold value under a 95% confidence interval."
-        )
-        st.success(
-            "**Strategic Recommendation:** Delivered compliance impact reports for state-level environmental policy enforcement."
+
+    with tab_f3:
+        st.subheader("Retail Sales Dashboard (Mar 2026)")
+        st.image(
+            "my.png",
+            use_container_width=True,
+            caption=(
+                "AED 456K Total Sales, Category Breakdown & Demographic Slicers"
+            ),
         )
 
 elif section == "Data Products & Risk Simulation":
