@@ -81,17 +81,17 @@ section = st.sidebar.radio(
         "Superstore Supply Chain & Profitability",
         "Global Logistics & Risk Intelligence",
         "Global CO2 Emissions Analytics",
-        "Tableau Public Portfolio Suite",
-        "UAE Energy Supply & CO Analytics",
+        "UAE Energy & Carbon Monoxide Engineering",
         "Remote Case Study: ROA",
-        "Foundational BI Suite",
+        "Tableau Public & Wildlife Analytics",
+        "Weather & Lightning Risk Analysis",
+        "Foundational BI Suite (Pharmacy & Retail)",
         "Data Products & Risk Simulation",
         "Advisory Framework",
     ],
 )
 
 if section == "Home & Overview":
-    # --- PERSONAL PORTRAIT AT THE TOP (Drives LinkedIn Preview) ---
     st.image(
         "a_Change_the_words_on_.png",
         use_container_width=True,
@@ -145,13 +145,13 @@ if section == "Home & Overview":
 
     st.markdown("---")
     st.markdown("### 🖥️ Operational Command Center & Advisory Environment")
-    
+
     col_env1, col_env2 = st.columns(2)
     with col_env1:
         st.image(
             "office.jpeg",
             use_container_width=True,
-            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment[cite: 31]",
+            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment[cite: 30]",
         )
     with col_env2:
         st.image(
@@ -172,23 +172,31 @@ elif section == "Superstore Supply Chain & Profitability":
         "**Project Type:** Enterprise Power BI Commercial & Profit Margin Analysis"
     )
     st.write(
-        "**Scope:** Granular breakdown of sales revenue by product categories (Furniture, Office Supplies, Technology), segment profitability, regional performance, and shipping mode efficiencies."
+        "**Scope:** Granular breakdown of sales revenue by product categories, segment profitability, regional performance, and shipping mode efficiencies."
     )
 
     st.markdown("---")
+    col_sup1, col_sup2 = st.columns(2)
+    with col_sup1:
+        st.image(
+            "Screenshot 2026-07-01 095504.png",
+            use_container_width=True,
+            caption="Superstore Executive View | Sales Revenue & Segment Margins[cite: 37]",
+        )
+    with col_sup2:
+        st.image(
+            "Screenshot 2026-07-01 095527.png",
+            use_container_width=True,
+            caption="Average Days to Ship by Ship Mode[cite: 38]",
+        )
+
+    st.markdown("---")
+    st.subheader("Product Performance Breakdown")
     st.image(
-        "Screenshot 2026-07-01 095504.png",
+        "Screenshot 2026-02-27 071707.png",
         use_container_width=True,
-        caption="Superstore Executive View | Sales Revenue by Category & Profit Margins by Segment[cite: 38]",
+        caption="Sum of Price, Total Revenue, and Units by Product Category[cite: 31]",
     )
-
-    st.markdown("---")
-    st.subheader("Key Commercial Insights")
-    st.markdown("""
-    * **Revenue Concentration:** Analyzed revenue distribution across Furniture, Office Supplies, and Technology product lines[cite: 38].
-    * **Segment Margin Review:** Evaluated segment profitability (Consumer vs. Corporate vs. Home Office) to pinpoint high-margin operational sweet spots[cite: 38].
-    * **Shipping Efficiency:** Assessed delivery turnaround times across Standard, Second, and First Class shipping modes.
-    """)
 
 elif section == "Global Logistics & Risk Intelligence":
     st.header("🌐 Global Logistics & Supply Chain Analysis Dashboard (2026)")
@@ -200,19 +208,35 @@ elif section == "Global Logistics & Risk Intelligence":
     )
 
     st.markdown("---")
-    st.image(
-        "Screenshot 2026-03-12 221148.jpg",
-        use_container_width=True,
-        caption="Logistics & Supply Chain Analysis Dashboard | Global Order Mapping, Delivery Status Breakdown & Risk Sliders[cite: 36]",
-    )
+    col_log1, col_log2 = st.columns(2)
+    with col_log1:
+        st.image(
+            "Screenshot 2026-03-12 221148.png",
+            use_container_width=True,
+            caption="Global Supply Chain Dashboard with Risk Slider & Mapping[cite: 35]",
+        )
+    with col_log2:
+        st.image(
+            "powerbi.png",
+            use_container_width=True,
+            caption="Shipment Performance Dashboard | Geospatial Risk & Route Analysis[cite: 23]",
+        )
 
     st.markdown("---")
-    st.subheader("Operational Highlights")
-    st.markdown("""
-    * **Risk Mitigation:** Integrated interactive `late_delivery_risk` slider controls to dynamically filter high-exposure transport corridors[cite: 36].
-    * **Delivery Status Breakdown:** Visualized proportions of Advanced Shipping, Late Delivery, Shipping Canceled, and On-Time fulfillment[cite: 36].
-    * **Global Geographic Spread:** Mapped order concentration across North America, South America, Europe, Asia, and Australia[cite: 36].
-    """)
+    st.subheader("Foundational Logistics Views & Route Mapping")
+    col_lsub1, col_lsub2 = st.columns(2)
+    with col_lsub1:
+        st.image(
+            "logistics .png",
+            use_container_width=True,
+            caption="Logistics Performance Overview (Feb 2026)[cite: 7]",
+        )
+    with col_lsub2:
+        st.image(
+            "Screenshot 2026-02-28 093719.jpg",
+            use_container_width=True,
+            caption="Detailed UAE Freight Cost & Status Breakdown[cite: 34]",
+        )
 
 elif section == "Global CO2 Emissions Analytics":
     st.header("🌍 Global CO2 Emissions & Per Capita Intelligence Dashboard")
@@ -220,71 +244,65 @@ elif section == "Global CO2 Emissions Analytics":
         "**Project Type:** Environmental Impact & Macro-Economic Power BI Suite"
     )
     st.write(
-        "**Scope:** Cross-country evaluation of historical total CO2 emissions alongside per capita emission rates, featuring dynamic country code filters and search lookup."
+        "**Scope:** Cross-country evaluation of historical total CO2 emissions alongside per capita emission rates, featuring dynamic country code filters."
     )
 
     st.markdown("---")
     st.image(
         "Screenshot 2026-06-05 210806.png",
         use_container_width=True,
-        caption="CO2 Emissions Executive Overview | Top Historical Countries & Per Capita Rankings[cite: 37]",
+        caption="CO2 Emissions Executive Overview | Top Historical Countries & Per Capita Rankings[cite: 36]",
     )
 
-    st.markdown("---")
-    st.subheader("Key Analytical Takeaways")
-    st.markdown("""
-    * **Historical Volume Leaders:** Ranked top global economies by total cumulative CO2 output (kt)[cite: 37].
-    * **Per Capita Intensity:** Examined per capita metrics highlighting high-intensity regions such as Qatar, UAE, and Kuwait[cite: 37].
-    * **Interactive Filtering:** Deployed dynamic search bars and ISO country code slicers (`Country Code`) for targeted geopolitical analysis[cite: 37].
-    """)
-
-elif section == "Tableau Public Portfolio Suite":
-    st.header("📈 Tableau Public Analytics Portfolio")
-    st.write(
-        "**Project Type:** Cloud-Published Interactive Vizzes & Spatial Dashboards"
-    )
-    st.write(
-        "**Scope:** Showcasing published Tableau Public works including strike analysis, temporal transit metrics, and global climate visualizations."
-    )
-
-    st.markdown("---")
-    st.image(
-        "WhatsApp Image 2026-09-12 at 8.55.09 AM.jpeg",
-        use_container_width=True,
-        caption="Tableau Public Creator Profile | GUMA_ADOLF_TABLEAU_PROJECT & CO2 VIZ[cite: 30]",
-    )
-
-    st.markdown("---")
-    st.subheader("Published Viz Highlights")
-    st.markdown("""
-    * **GUMA_ADOLF_TABLEAU_PROJECT:** Multi-quarter and multi-year distributional analysis tracking high-volume event metrics[cite: 30].
-    * **CO2 VIZ:** Geospatial world map color-coded by per capita emission gradients[cite: 30].
-    """)
-
-elif section == "UAE Energy Supply & CO Analytics":
+elif section == "UAE Energy & Carbon Monoxide Engineering":
     st.header("⚡ UAE Energy Commodities & Carbon Monoxide Analytics")
     st.write(
         "**Project Type:** Python Data Engineering & Power BI Executive Dashboard Suite"
     )
     st.write(
-        "**Scope:** Comprehensive multi-sector examination of UAE energy commodities and historical Carbon Monoxide (CO) concentration trends across emirates and location types (2006–2021)."
+        "**Scope:** Comprehensive multi-sector examination of UAE energy commodities and historical Carbon Monoxide (CO) concentration trends across emirates and location types."
     )
 
     st.markdown("---")
-    st.subheader("1. Power BI Executive Overview & Commodity Deep Dive")
-
-    col1, col2 = st.columns(2)
-    with col1:
+    st.subheader("1. Power BI Executive Dashboards")
+    col_e1, col_e2 = st.columns(2)
+    with col_e1:
         st.image(
             "Screenshot proje1.png",
             use_container_width=True,
-            caption="UAE Energy Commodities Dashboard - Executive Overview[cite: 28]",
+            caption="UAE Energy Commodities Dashboard - Executive Overview[cite: 26]",
         )
-    with col2:
+    with col_e2:
         st.image(
             "Screenshot proje2.png",
             use_container_width=True,
-            caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping[cite: 29]",
+            caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping[cite: 27]",
+        )
+
+    I = st.markdown("---")
+    st.subheader("2. Python Jupyter Notebook Analysis (CO Concentrations)")
+    col_c1, col_c2 = st.columns(2)
+    with col_c1:
+        st.image(
+            "chart.png",
+            use_container_width=True,
+            caption="Average CO Concentration by Emirate (2006–2016)[cite: 19]",
+        )
+        st.image(
+            "plot.png",
+            use_container_width=True,
+            caption="UAE Annual Average Carbon Monoxide Trends[cite: 21]",
+        )
+    with col_c2:
+        st.image(
+            "final.png",
+            use_container_width=True,
+            caption="Average CO Concentration by Location Type[cite: 20]",
+        )
+        st.image(
+            "plot2.png",
+            use_container_width=True,
+            caption="Statistical Summary Table: CO by Location Type[cite: 22]",
         )
 
 elif section == "Remote Case Study: ROA":
@@ -301,16 +319,86 @@ elif section == "Remote Case Study: ROA":
     st.image(
         "California .png",
         use_container_width=True,
-        caption="Seaborn Boxplot Analysis | State-Level AQI Distribution & Outlier Detection[cite: 20]",
+        caption="Seaborn Boxplot Analysis | State-Level AQI Distribution & Outlier Detection[cite: 18]",
     )
     st.write(
         "Executed rigorous statistical evaluations using Python and SciPy (`scipy.stats.ttest_ind`) with Welch's t-test adjustments (`equal_var = False`) to account for unequal variances across regional populations (alpha = 0.05)."
     )
 
-elif section == "Foundational BI Suite":
+elif section == "Tableau Public & Wildlife Analytics":
+    st.header("🦅 Tableau Public Portfolio & Wildlife Incident Analytics")
+    st.write(
+        "**Project Type:** Cloud-Published Interactive Vizzes & Spatial Aviation Safety Analysis"
+    )
+    st.write(
+        "**Scope:** Published Tableau Public vizzes (`GUMA_ADOLF_TABLEAU_PROJECT`, `CO2 VIZ`) alongside multi-year US bird strikes and wildlife incident density mapping."
+    )
+
+    st.markdown("---")
+    st.image(
+        "WhatsApp Image 2026-09-12 at 8.55.09 AM.jpeg",
+        use_container_width=True,
+        caption="Tableau Public Creator Profile | Published Vizzes Showcase[cite: 29]",
+    )
+
+    st.markdown("---")
+    st.subheader("US Wildlife & Bird Strikes Analytics Suite")
+    col_wld1, col_wld2 = st.columns(2)
+    with col_wld1:
+        st.image(
+            "WhatsApp Image 2026-09-07 at 10.58.27 AM.jpeg",
+            use_container_width=True,
+            caption="Wildlife Strike Frequency Bins (Tableau)[cite: 13]",
+        )
+        st.image(
+            "WhatsApp Image 2026-09-07.jpeg",
+            use_container_width=True,
+            caption="Sum of Number of Strikes Trend Line (2016–2018)[cite: 15]",
+        )
+    with col_wld2:
+        st.image(
+            "WhatsApp Image 2026-09-07 at 10.58.29AM.jpeg",
+            use_container_width=True,
+            caption="US Spatial Density Incident Mapping[cite: 14]",
+        )
+        st.image(
+            "09-10 at 10.36.28 AM.jpeg",
+            use_container_width=True,
+            caption="Seoul Bike Rentals Time-Series Analysis[cite: 9]",
+        )
+
+elif section == "Weather & Lightning Risk Analysis":
+    st.header("⚡ Environmental Risk: Weather & Lightning Strike Analytics")
+    st.write(
+        "**Project Type:** Exploratory Time-Series & Statistical Distribution Analysis"
+    )
+    st.write(
+        "**Scope:** Examining temporal weather volatility, weekday distributions, and seasonal percentage concentrations of lightning and storm strikes."
+    )
+
+    st.markdown("---")
+    col_ltg1, col_ltg2 = st.columns(2)
+    with col_ltg1:
+        st.image(
+            "Screenshot 2026-08-23 081053[1].png",
+            use_container_width=True,
+            caption="Lightning Distribution per Weekday (2018)[cite: 24]",
+        )
+    with col_ltg2:
+        st.image(
+            "Screenshot 2026-08-23 081139[2].png",
+            use_container_width=True,
+            caption="Monthly Percentage Concentration of Lightning Strikes (2016–2018)[cite: 25]",
+        )
+
+elif section == "Foundational BI Suite (Pharmacy & Retail)":
     st.header("📈 Foundational Business Intelligence Suite")
+    st.write(
+        "**Project Type:** Early Commercial, Pharmacy, and Logistics Power BI Reports"
+    )
+
     tab_f1, tab_f2, tab_f3 = st.tabs(
-        ["Pharmacy Sales BI", "Logistics Performance BI", "Retail Sales BI"]
+        ["Pharmacy Sales BI", "Retail Sales BI", "Logistics Milestones"]
     )
 
     with tab_f1:
@@ -318,27 +406,41 @@ elif section == "Foundational BI Suite":
         st.image(
             "feb.png",
             use_container_width=True,
-            caption="Regional UAE Geographic Mapping & Product Profitability[cite: 13]",
+            caption="Regional UAE Geographic Mapping & Product Profitability[cite: 8]",
+        )
+        st.image(
+            "Screenshot 2026-02-27 073605.png",
+            use_container_width=True,
+            caption="Pharmacy Sales Dashboard Detailed View[cite: 32]",
         )
 
     with tab_f2:
-        st.subheader("Logistics Performance Overview (Feb 2026)")
-        st.image(
-            "WhatsApp Image 2026-09-07 at 10.58.10AM.jpeg",
-            use_container_width=True,
-            caption="UAE Route Mapping, Freight Costs & Status Tracking",
-        )
-
-    with tab_f3:
         st.subheader("Retail Sales Dashboard (Mar 2026)")
+        st.image(
+            "my.png",
+            use_container_width=True,
+            caption="AED 456K Total Sales, Category Breakdown & Demographic Slicers[cite: 6]",
+        )
         st.image(
             "WhatsApp Image 2026-09-07 at 10.58.22AM.jpeg",
             use_container_width=True,
-            caption="AED 456K Total Sales, Category Breakdown & Demographic Slicers",
+            caption="Retail Sales Distribution & Date Filtering[cite: 10]",
+        )
+
+    with tab_f3:
+        st.subheader("Early Logistics & Transport Reports")
+        st.image(
+            "WhatsApp Image 2026-09-07 at 10.58.10AM.jpeg",
+            use_container_width=True,
+            caption="Logistics Performance Overview Map & Weights[cite: 10]",
         )
 
 elif section == "Data Products & Risk Simulation":
     st.header("📦 Featured Data Products & Simulations")
+    st.write(
+        "Interactive analytics engines built to optimize fulfillment pathways and reduce late delivery risks."
+    )
+
     risk_slider = st.slider(
         "Select Late Delivery Risk Threshold Factor",
         min_value=0.0,
@@ -346,6 +448,7 @@ elif section == "Data Products & Risk Simulation":
         value=0.25,
         step=0.05,
     )
+
     if risk_slider > 0.5:
         st.error(
             f"⚠️ High Risk Threshold ({risk_slider}): Rerouting logistics bottlenecks and triggering automated exception alerts."
