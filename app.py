@@ -1,5 +1,67 @@
 import streamlit as st
+import streamlit as st
 
+def show_home_overview():
+    # Hero Section with Profile Picture Side-by-Side
+    col_img, col_text = st.columns([1, 2.5], gap="medium")
+    
+    with col_img:
+        # Make sure 'Guma_Passport_Photo.JPG' is in your repository root folder
+        st.image("Guma_Passport_Photo.JPG", caption="Guma Adolf | Founder & Data Scientist", use_container_width=True)
+        
+    with col_text:
+        st.markdown("""
+        # NG Advisory Co.
+        ### *Bridging Heavy Operations & Predictive Data Science*
+        
+        Welcome to the digital command center of **NG Advisory Co.** Founded on the front lines of UAE logistics and supply chain execution (AED 36M+ scale), our mission is simple: **move beyond static reporting into predictive risk and proactive operational control.**
+        """)
+    
+    st.markdown("---")
+    
+    # Core Value Proposition / Methodology (From Coursework to Commercial Control)
+    st.markdown("""
+    ### 🚀 The NG Advisory Methodology: From Coursework to Control
+    Every analytical framework we build—whether through advanced Python pipelines, statistical modeling, or business intelligence—is engineered to solve real-world operational bottlenecks:
+    """)
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("""
+        #### 📊 1. Operational Data Auditing
+        * **From EDA to Data Integrity:** Cleaning, structuring, and auditing raw multi-source datasets.
+        * **Load & Variance Profiling:** Mapping distributions, skewness, and transit delays before they impact margins.
+        """)
+        
+    with col2:
+        st.markdown("""
+        #### 🧪 2. Rigorous Hypothesis Testing
+        * **Inferential Statistics:** Deploying Welch’s t-tests, $p$-values, and significance thresholds ($\alpha = 0.05$).
+        * **Separating Signal from Noise:** Isolating nuisance factors to ensure decisions are backed by empirical data, not intuition.
+        """)
+        
+    with col3:
+        st.markdown("""
+        #### 🔮 3. Predictive Risk & Bayesian Logic
+        * **Bayes' Theorem in Action:** Continuously updating probability estimates as live environmental and route data streams in.
+        * **Closing the Loop:** Translating insights directly into routing, load balancing, and exception handling.
+        """)
+
+    st.markdown("---")
+    
+    # Live Platform Navigation Callout
+    st.markdown("""
+    ### 📂 Explore the Live Platform Suite
+    Use the sidebar navigation to explore our end-to-end capabilities:
+    * **Supply Chain & Global Logistics:** Superstore analytics, weather-related delay risk, and maritime intelligence.
+    * **Advanced Python & SciPy Pipelines:** AQI environmental case studies, hypothesis testing, and Seaborn visual asset mapping.
+    * **Foundational BI Suite:** Commercial retail sales, pharmacy records, and core executive Power BI dashboards.
+    * **Advisory Frameworks:** Strategic consulting methodologies designed to close the gap between insight and execution.
+    """)
+    
+    # Operational Philosophy Quote
+    st.info("💡 **Operational Philosophy:** *Reporting tells you what happened; predictive risk tells you what to do next. The ones who close the loop to control win.*")
 # Page Configuration
 st.set_page_config(
     page_title="Guma Adolf | NG Advisory Co. Platform",
