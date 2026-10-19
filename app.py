@@ -57,18 +57,15 @@ menu_selection = st.sidebar.radio(
 # 1. HOME / OVERVIEW SECTION
 # ==========================================
 if menu_selection == "🏠 Home / Overview":
-    col_img, col_text = st.columns([1, 2.5], gap="medium")
+    # Hero Command Center Banner
+    display_image_safely(["a_Add_even_a_2_screen_.jpg", "office.jpeg"], caption="NG Advisory Co. Command Center | Guma Adolf")
     
-    with col_img:
-        display_image_safely(["Guma_Passport_Photo.JPG"], caption="Guma Adolf | Founder & Data Scientist")
-            
-    with col_text:
-        st.markdown("""
-        # NG Advisory Co.
-        ### *Bridging Heavy Operations & Predictive Data Science*
-        
-        Welcome to the digital command center of **NG Advisory Co.** Founded on the front lines of UAE logistics and supply chain execution (AED 36M+ scale), our mission is simple: **move beyond static reporting into predictive risk and proactive operational control.**
-        """)
+    st.markdown("""
+    # NG Advisory Co.
+    ### *Bridging Heavy Operations & Predictive Data Science*
+    
+    Welcome to the digital command center of **NG Advisory Co.** Founded on the front lines of UAE logistics and supply chain execution (AED 36M+ scale), our mission is simple: **move beyond static reporting into predictive risk and proactive operational control.**
+    """)
     
     st.markdown("---")
     
