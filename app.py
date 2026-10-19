@@ -66,7 +66,7 @@ st.markdown(
 st.sidebar.markdown("---")
 st.sidebar.subheader("📬 Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
-st.sidebar.markdown("*Founder, NG Advisory Co.*")
+st.sidebar.markdown("*Founder & Data Scientist, NG Advisory Co.*")
 st.sidebar.markdown("📧 [guma.adolf.da@email.com](mailto:guma.adolf.da@email.com)")
 st.sidebar.markdown("📱 +971 56 123 3978")
 st.sidebar.markdown("🔗 [LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
@@ -79,6 +79,11 @@ section = st.sidebar.radio(
     [
         "Home & Overview",
         "UAE Energy Supply Analytics",
+        "Foundational Pharmacy BI",
+        "Foundational Logistics BI",
+        "Foundational Retail Sales BI",
+        "Seoul Bike Rentals Analytics",
+        "US Wildlife & Bird Strikes Analytics",
         "Remote Case Study: ROA",
         "Data Products & Risk Simulation",
         "Advisory Framework",
@@ -140,7 +145,6 @@ if section == "Home & Overview":
 
     st.markdown("---")
     st.markdown("### 🖥️ Operational Command Center Environment")
-    # --- MULTI-MONITOR UI PLACED LOWER DOWN ---
     st.image(
         "a_Add_even_a_2_screen_.png",
         use_container_width=True,
@@ -180,34 +184,157 @@ elif section == "UAE Energy Supply Analytics":
             * Utilized faceted multi-panel line plots (`sns.relplot`) with independent Y-axes (`sharey=False`) to clearly isolate sector-specific trajectories.
             """)
 
-    st.markdown("---")
-    st.subheader("Sector Breakdown & Insights")
-
-    tab1, tab2, tab3 = st.tabs(
-        [
-            "Gross Electricity & Gas",
-            "Renewable Energy Surge",
-            "Crude Oil & NGLs",
-        ]
+elif section == "Foundational Pharmacy BI":
+    st.header(
+        "📈 Foundational Case Study: UAE Pharmacy Sales Analysis (Power BI)"
+    )
+    st.write(
+        "**Project Type:** Foundational Business Intelligence & Regional Geographic Mapping (February 2026)"
+    )
+    st.write(
+        "**Scope:** Early exploratory reporting mapping out multi-region pharmacy sales performance across the UAE[cite: 13], tracking product-level profitability for key medical commodities[cite: 13], and establishing foundational data visualization frameworks."
     )
 
-    with tab1:
-        st.markdown("### Gross Generated Electricity & Natural Gas")
-        st.write(
-            "These sectors operate on a massive national scale, driving industrial and urban power generation across Emirates like Abu Dhabi. The boxplot distribution confirms steady, high-volume baseload supply over the 13-year timeline."
-        )
+    st.markdown("---")
+    st.subheader(
+        "Pharmacy_Sales_Analysis_FEB2026_Full_Report_2 Dashboard Preview"
+    )
 
-    with tab2:
-        st.markdown("### Electricity Produced by Renewable Energy")
-        st.success(
-            "🚀 **Key Growth Trend:** Highlighting a dramatic upward inflection curve starting around 2017–2018, scaling past 6,000 GWh by 2021 as the UAE accelerated its clean energy transition."
-        )
+    st.image(
+        "feb.png",
+        use_container_width=True,
+        caption=(
+            "Foundational Power BI Report (Feb 2026) | Regional UAE Geographic"
+            " Mapping & Product Profitability Metrics[cite: 13]"
+        ),
+    )
 
-    with tab3:
-        st.markdown("### Crude Oil & Natural Gas Liquids (NGLs)")
-        st.write(
-            "Examined extraction and supply stability across reporting entities, validating structural integrity and cyclical adjustments through independent Y-axis scaling."
-        )
+    st.markdown("---")
+    st.subheader("Key Takeaways & Evolution")
+    st.markdown("""
+    * **Geographic Mapping Foundations:** Utilized built-in Power BI mapping tools to anchor multi-hub performance across UAE coordinates[cite: 13].
+    * **Product Profitability Breakdown:** Analyzed sales distribution using clear card visuals, pie charts, and bar distributions to isolate high-performing inventory items[cite: 13].
+    * **The Compounding Journey:** Serving as an early milestone in data visualization before scaling into advanced Python automation, SQL querying, and enterprise risk modeling under NG Advisory Co.
+    """)
+
+elif section == "Foundational Logistics BI":
+    st.header(
+        "🚚 Foundational Case Study: UAE Logistics Performance Overview (Power BI)"
+    )
+    st.write(
+        "**Project Type:** Supply Chain Visibility & Route Performance Dashboard (February 2026)"
+    )
+    st.write(
+        "**Scope:** Operational intelligence dashboard tracking multi-hub freight distribution, delivery statuses (Delayed, Delivered, On-Time), and product-category weights across UAE transport routes[cite: 12]."
+    )
+
+    st.markdown("---")
+    st.subheader(
+        "Logistics Performance Overview-February 2026 Dashboard Preview"
+    )
+
+    st.image(
+        "logistics .png",
+        use_container_width=True,
+        caption=(
+            "Foundational Logistics Report (Feb 2026) | UAE Route Mapping,"
+            " Freight Costs & Status Tracking[cite: 12]"
+        ),
+    )
+
+    st.markdown("---")
+    st.subheader("Key Takeaways & Operational Value")
+    st.markdown("""
+    * **Route Status Monitoring:** Visualized live destination tracking to isolate delivery exceptions and operational delays across the UAE[cite: 12].
+    * **Weight & Category Allocation:** Evaluated freight distribution across heavy categories like Construction, Electrical, and Pharmacy supply chains[cite: 12].
+    * **Operational Foundation:** Demonstrates deep domain familiarity with real-world freight handling before expanding into predictive Python simulation models.
+    """)
+
+elif section == "Foundational Retail Sales BI":
+    st.header("🛒 Foundational Case Study: Retail Sales Dashboard (Power BI)")
+    st.write(
+        "**Project Type:** Commercial Retail Analytics & Revenue Intelligence (March 2026)[cite: 11]"
+    )
+    st.write(
+        "**Scope:** Early commercial sales report analyzing AED 456,000 in total revenue across product categories (Electronics, Clothing, Beauty) with interactive date slicers and gender demographic filtering[cite: 11]."
+    )
+
+    st.markdown("---")
+    st.subheader("My_First_Retail_Dashboard_Final Dashboard Preview")
+
+    st.image(
+        "my.png",
+        use_container_width=True,
+        caption=(
+            "Foundational Retail Sales Report (Mar 2026) | AED 456K Total Sales,"
+            " Category Breakdown & Demographic Slicers[cite: 11]"
+        ),
+    )
+
+    st.markdown("---")
+    st.subheader("Key Takeaways & Commercial Insights")
+    st.markdown("""
+    * **Revenue Tracking:** Centralized total sales performance (AED 456,000) using executive KPI card visuals[cite: 11].
+    * **Multi-Category Distribution:** Assessed revenue split across Electronics, Clothing, and Beauty sectors via dynamic pie and column charts[cite: 11].
+    * **Interactive Slicing:** Integrated date timeline controls (`1/1/2023` to `1/1/2024`) and gender filters to enable targeted commercial data discovery[cite: 11].
+    """)
+
+elif section == "Seoul Bike Rentals Analytics":
+    st.header("🚲 Tableau Analytics: Seoul Bike Rentals (2018)")
+    st.write(
+        "**Project Type:** Time-Series & Demand Distribution Analysis (Tableau Public)"
+    )
+    st.write(
+        "**Scope:** Comprehensive temporal exploration of public bike-sharing usage across weekdays, hours, and seasonal variations to identify peak transit windows and low-traffic operational lulls[cite: 14]."
+    )
+
+    st.markdown("---")
+    st.subheader("Weekday & Hourly Demand Patterns")
+
+    st.image(
+        "09-10 at 10.36.28 AM.jpeg",
+        use_container_width=True,
+        caption=(
+            "Seoul Average Bike Rentals per Hour on Weekdays (2018) | Peak Commute"
+            " Hours & Low-Traffic Windows[cite: 14]"
+        ),
+    )
+
+    st.markdown("---")
+    st.subheader("Key Analytical Insights")
+    st.markdown("""
+    * **Commuter Peaks:** Identified sharp morning and evening rental spikes corresponding to weekday transit habits[cite: 14].
+    * **Maintenance Windows:** Pinpointed low-demand operational windows (such as 9 AM to 3 PM) ideal for bike redistribution and fleet servicing[cite: 14].
+    * **Gradient Visual Encoding:** Utilized color-mapped density bars (`SUM(Rented Bike Count)`) to instantly highlight high-volume hours[cite: 14].
+    """)
+
+elif section == "US Wildlife & Bird Strikes Analytics":
+    st.header("🦅 Tableau Analytics: US Wildlife & Bird Strikes (2016–2018)")
+    st.write(
+        "**Project Type:** Spatial Density Mapping & Multi-Year Strike Trend Analysis (Tableau Public)"
+    )
+    st.write(
+        "**Scope:** Large-scale analysis of aviation safety incident records, mapping spatial strike concentrations across US coordinates and examining multi-year volume trajectories[cite: 15, 16, 20]."
+    )
+
+    st.markdown("---")
+    st.subheader("Geographic Density & Multi-Year Incident Trends")
+
+    st.image(
+        "WhatsApp Image 2026-09-07.jpeg",
+        use_container_width=True,
+        caption=(
+            "US Wildlife Strike Density Mapping & Temporal Incident Trends (2016–2018)[cite: 16, 20]"
+        ),
+    )
+
+    st.markdown("---")
+    st.subheader("Key Takeaways & Safety Intelligence")
+    st.markdown("""
+    * **Spatial Risk Mapping:** Deployed density-based geographic maps to identify high-concentration collision zones across regional flight paths[cite: 16].
+    * **Longitudinal Trends:** Tracked annual strike fluctuations between 2016 and 2018 to evaluate safety intervention outcomes[cite: 20].
+    * **Aviation Logistics Relevance:** Demonstrates advanced capability in handling complex, multi-million record safety datasets for operational risk mitigation[cite: 15, 18].
+    """)
 
 elif section == "Remote Case Study: ROA":
     st.header("🌍 Remote Client Engagement: Repair Our Air (ROA)")
