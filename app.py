@@ -65,7 +65,7 @@ st.markdown(
 # --- SIDEBAR CONTACT & ADVISORY ---
 st.sidebar.markdown("---")
 st.sidebar.subheader("📬 Contact & Advisory")
-st.sidebar.markdown("**Guma Adolf**")
+st.sidebar.markdown("**Guma Adolf Amooti**")
 st.sidebar.markdown("*Founder & Data Scientist, NG Advisory Co.*")
 st.sidebar.markdown("📧 [guma.adolf.da@email.com](mailto:guma.adolf.da@email.com)")
 st.sidebar.markdown("📱 +971 56 123 3978")
