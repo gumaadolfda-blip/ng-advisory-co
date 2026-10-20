@@ -62,16 +62,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- SESSION STATE INITIALIZATION FOR REVIEWS ---
-if "reviews_list" not in st.session_state:
-    st.session_state.reviews_list = [
-        {"name": "Supply Chain Director, Dubai Logistics", "rating": "⭐⭐⭐⭐⭐", "comment": "Guma and NG Advisory Co. provided incredible clarity on our freight delay bottlenecks. Highly recommend their dashboard frameworks!"},
-        {"name": "Operations Manager, FCL Freight", "rating": "⭐⭐⭐⭐⭐", "comment": "The automated data pipelines and risk models built for our inventory workflows completely transformed our daily execution."}
-    ]
-
-if "client_logged_in" not in st.session_state:
-    st.session_state.client_logged_in = False
-
 # --- SIDEBAR CONTACT & ADVISORY ---
 st.sidebar.markdown("---")
 st.sidebar.subheader("📬 Contact & Advisory")
@@ -97,7 +87,6 @@ section = st.sidebar.radio(
         "Weather & Lightning Risk Analysis",
         "Foundational BI Suite (Pharmacy & Retail)",
         "Data Products & Risk Simulation",
-        "Client Portal & Feedback",
         "Advisory Framework",
     ],
 )
@@ -490,82 +479,6 @@ elif section == "Data Products & Risk Simulation":
         st.success(
             f"✅ Optimal Risk Threshold ({risk_slider}): Fulfillment operations running smoothly within target thresholds."
         )
-
-elif section == "Client Portal & Feedback":
-    st.header("🔐 NG Advisory Co. | Client Portal & Resource Center")
-    st.write("Welcome to the secure client gateway. Log in to access confidential advisory frameworks, download proprietary assessment templates, and share your feedback.")
-
-    tab_portal1, tab_portal2, tab_portal3 = st.tabs(["🔐 Client Portal Login", "📥 Downloadable Assets", "💬 Reviews & Testimonials"])
-
-    with tab_portal1:
-        st.subheader("Client Authentication")
-        if not st.session_state.client_logged_in:
-            with st.form("login_form"):
-                client_email = st.text_input("Client Email Address")
-                client_pass = st.text_input("Access Passcode", type="password")
-                submit_login = st.form_submit_button("Access Portal")
-                
-                if submit_login:
-                    if client_email and client_pass:
-                        st.session_state.client_logged_in = True
-                        st.session_state.user_email = client_email
-                        st.success("Successfully authenticated! Welcome to the exclusive client dashboard.")
-                        st.rerun()
-                    else:
-                        st.warning("Please enter your email and passcode to proceed.")
-        else:
-            st.success(f"🟢 Logged in as: **{st.session_state.user_email}**")
-            st.info("🔓 **Exclusive Client Workspace:** Access to confidential logistics optimization models and direct consultation scheduling is currently unlocked.")
-            if st.button("Log Out"):
-                st.session_state.client_logged_in = False
-                st.rerun()
-
-    with tab_portal2:
-        st.subheader("Proprietary Advisory Templates & Resources")
-        st.write("Download field-tested logistics audit checklists and analytics templates crafted by NG Advisory Co.")
-        
-        # Sample data for download
-        sample_csv = "Metric,Target,Status\nInventory Accuracy,>85%,Optimal\nSOP Compliance,92%,Compliant\nLate Delivery Risk,<5%,Controlled"
-        st.download_button(
-            label="📄 Download Logistics Audit Checklist (CSV)",
-            data=sample_csv,
-            file_name="NG_Advisory_Logistics_Audit_Template.csv",
-            mime="text/csv",
-        )
-
-        sample_whitepaper = "NG Advisory Co. Enterprise Whitepaper:\nBridging Raw Data and Logistics Visibility through Python & SQL Automation.\nAuthor: Guma Adolf, Founder."
-        st.download_button(
-            label="📘 Download Enterprise Advisory Whitepaper (TXT)",
-            data=sample_whitepaper,
-            file_name="NG_Advisory_Enterprise_Whitepaper.txt",
-            mime="text/plain",
-        )
-
-    with tab_portal3:
-        st.subheader("Client Feedback & Reviews")
-        st.write("See what partners and logistics operators are saying about our engagements, or leave your own review below!")
-        
-        # Display existing reviews
-        for rev in st.session_state.reviews_list:
-            st.markdown(f"> **{rev['name']}**  \n> {rev['rating']}  \n> *\"{rev['comment']}\"*")
-            st.markdown("---")
-
-        # Form to submit a new review
-        st.subheader("Leave a Review or Inquiry")
-        with st.form("review_form"):
-            reviewer_name = st.text_input("Your Name / Company")
-            reviewer_rating = st.selectbox("Rating", ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐", "⭐"])
-            reviewer_comment = st.text_area("Your Feedback or Project Experience")
-            submit_review = st.form_submit_button("Submit Review")
-
-            if submit_review:
-                if reviewer_name and reviewer_comment:
-                    new_rev = {"name": reviewer_name, "rating": reviewer_rating, "comment": reviewer_comment}
-                    st.session_state.reviews_list.append(new_rev)
-                    st.success("Thank you! Your review has been successfully posted to the platform.")
-                    st.rerun()
-                else:
-                    st.warning("Please fill in both your name and feedback comment before submitting.")
 
 elif section == "Advisory Framework":
     st.header("🏛️ Practical Systems & Business Control")
