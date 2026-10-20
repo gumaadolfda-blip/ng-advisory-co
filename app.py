@@ -1,3 +1,4 @@
+
 import streamlit as st
 
 # Page Configuration
@@ -80,16 +81,16 @@ if "user_email" not in st.session_state:
 
 # --- SIDEBAR CONTACT & ADVISORY ---
 st.sidebar.markdown("---")
-st.sidebar.subheader("📬 Contact & Advisory")
+st.sidebar.subheader("Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
 st.sidebar.markdown("*Founder & Data Scientist, NG Advisory Co.*")
-st.sidebar.markdown("📧 [guma.adolf.da@gmail.com](mailto:guma.adolf.da@gmail.com)")
-st.sidebar.markdown("📱 +971 56 123 3978")
-st.sidebar.markdown("🔗 [LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
+st.sidebar.markdown("guma.adolf.da@gmail.com")
+st.sidebar.markdown("+971 56 123 3978")
+st.sidebar.markdown("[LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
 st.sidebar.markdown("---")
 
 # Sidebar Navigation containing ALL projects and frameworks
-st.sidebar.markdown("### 🧭 NG Advisory Co.")
+st.sidebar.markdown("### NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
     [
@@ -161,7 +162,7 @@ if section == "Home & Overview":
         )
 
     st.markdown("---")
-    st.markdown("### 🖥️ Executive Command Center & Professional Gallery")
+    st.markdown("### Executive Command Center & Professional Gallery")
     st.markdown("Explore the operational environments and professional milestones driving NG Advisory Co.:")
 
     col_p1, col_p2 = st.columns(2)
@@ -194,12 +195,12 @@ if section == "Home & Overview":
         st.image(
             "Guma_Passport_Photo.JPG",
             use_container_width=True,
-            caption="Guma Adolf | Founder & Data Scientist",
+            caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.",
         )
         st.markdown("**Vision & Leadership:** Directing enterprise digital transformation, bridging heavy operational logistics with modern predictive data science.")
 
     st.markdown("---")
-    st.markdown("### 📊 Live Operational Control Preview")
+    st.markdown("### Live Operational Control Preview")
     st.text("Inventory Accuracy (Target: >85%)")
     st.progress(86)
     st.text("SOP Compliance & Governance")
@@ -502,10 +503,10 @@ elif section == "Client Portal & Feedback":
     st.write("Welcome to the secure global gateway. Create an account or log in to access confidential advisory frameworks, download proprietary assessment templates, and connect directly with our team.")
 
     tab_portal1, tab_portal2, tab_portal3, tab_portal4 = st.tabs([
-        "🔐 Client Login & Account Creation", 
-        "📥 Downloadable Assets", 
-        "💬 Reviews & Testimonials", 
-        "📞 Contact Us"
+        "Client Login & Account Creation", 
+        "Downloadable Assets", 
+        "Reviews & Testimonials", 
+        "Contact Us"
     ])
 
     with tab_portal1:
@@ -563,7 +564,7 @@ elif section == "Client Portal & Feedback":
         
         sample_csv = "Metric,Target,Status\nInventory Accuracy,>85%,Optimal\nSOP Compliance,92%,Compliant\nLate Delivery Risk,<5%,Controlled"
         st.download_button(
-            label="📄 Download Logistics Audit Checklist (CSV)",
+            label="Download Logistics Audit Checklist (CSV)",
             data=sample_csv,
             file_name="NG_Advisory_Logistics_Audit_Template.csv",
             mime="text/csv",
@@ -571,7 +572,7 @@ elif section == "Client Portal & Feedback":
 
         sample_whitepaper = "NG Advisory Co. Enterprise Whitepaper:\nBridging Raw Data and Logistics Visibility through Python & SQL Automation.\nAuthor: Guma Adolf, Founder, CEO & Lead Operator."
         st.download_button(
-            label="📘 Download Enterprise Advisory Whitepaper (TXT)",
+            label="Download Enterprise Advisory Whitepaper (TXT)",
             data=sample_whitepaper,
             file_name="NG_Advisory_Enterprise_Whitepaper.txt",
             mime="text/plain",
@@ -602,7 +603,7 @@ elif section == "Client Portal & Feedback":
                     st.warning("Please fill in both your name and feedback comment before submitting.")
 
     with tab_portal4:
-        st.subheader("📞 Direct Contact & Enterprise Inquiries")
+        st.subheader("Direct Contact & Enterprise Inquiries")
         st.write("Have a custom project or enterprise advisory requirement? Reach out directly to our headquarters:")
         st.markdown("""
         * **Founder, CEO & Lead Operator:** Guma Adolf
@@ -610,7 +611,7 @@ elif section == "Client Portal & Feedback":
         * **Official Email:** guma.adolf.da@gmail.com
         * **Global Network:** LinkedIn (`https://www.linkedin.com/in/gumadolf`)
         """)
-        st.info("💡 We respond to all global client inquiries within 24 hours.")
+        st.info("We respond to all global client inquiries within 24 hours.")
 
 elif section == "Advisory Framework":
     st.header("🏛️ Practical Systems & Business Control")
@@ -620,9 +621,9 @@ elif section == "Advisory Framework":
     * **Automation & Control Dashboards:** Building real-time data products that eliminate manual reporting friction.
     """)
 
-# Footer with updated contact info, year 2026, and Worldwide branding
+# Footer with updated contact info, year 2026, and Worldwide branding (icons removed)
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded, Led & Operated by Guma Adolf | 📱 +971 56 123 3978 | 📧 guma.adolf.da@gmail.com | Worldwide</div>",
+    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded, Led & Operated by Guma Adolf | +971 56 123 3978 | guma.adolf.da@gmail.com | Worldwide</div>",
     unsafe_allow_html=True,
 )
