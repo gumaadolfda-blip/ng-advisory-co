@@ -1,4 +1,3 @@
-
 import streamlit as st
 
 # Page Configuration
@@ -83,7 +82,7 @@ if "user_email" not in st.session_state:
 st.sidebar.markdown("---")
 st.sidebar.subheader("Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
-st.sidebar.markdown("*Founder & Data Scientist, NG Advisory Co.*")
+st.sidebar.markdown("*Founder & Lead Data Architect, NG Advisory Co.*")
 st.sidebar.markdown("guma.adolf.da@gmail.com")
 st.sidebar.markdown("+971 56 123 3978")
 st.sidebar.markdown("[LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
@@ -570,7 +569,7 @@ elif section == "Client Portal & Feedback":
             mime="text/csv",
         )
 
-        sample_whitepaper = "NG Advisory Co. Enterprise Whitepaper:\nBridging Raw Data and Logistics Visibility through Python & SQL Automation.\nAuthor: Guma Adolf, Founder, CEO & Lead Operator."
+        sample_whitepaper = "NG Advisory Co. Enterprise Whitepaper:\nBridging Raw Data and Logistics Visibility through Python & SQL Automation.\nAuthor: Guma Adolf, Founder & Lead Data Architect."
         st.download_button(
             label="Download Enterprise Advisory Whitepaper (TXT)",
             data=sample_whitepaper,
@@ -606,7 +605,7 @@ elif section == "Client Portal & Feedback":
         st.subheader("Direct Contact & Enterprise Inquiries")
         st.write("Have a custom project or enterprise advisory requirement? Reach out directly to our headquarters:")
         st.markdown("""
-        * **Founder, CEO & Lead Operator:** Guma Adolf
+        * **Founder & Lead Data Architect:** Guma Adolf
         * **Direct Mobile / WhatsApp:** +971 56 123 3978
         * **Official Email:** guma.adolf.da@gmail.com
         * **Global Network:** LinkedIn (`https://www.linkedin.com/in/gumadolf`)
@@ -621,9 +620,9 @@ elif section == "Advisory Framework":
     * **Automation & Control Dashboards:** Building real-time data products that eliminate manual reporting friction.
     """)
 
-# Footer with updated contact info, year 2026, and Worldwide branding (icons removed)
+# Footer with updated contact info, year 2026, and Worldwide branding
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded, Led & Operated by Guma Adolf | +971 56 123 3978 | guma.adolf.da@gmail.com | Worldwide</div>",
+    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded & Architected by Guma Adolf | +971 56 123 3978 | guma.adolf.da@gmail.com | Worldwide</div>",
     unsafe_allow_html=True,
 )
