@@ -158,11 +158,11 @@ if section == "Home & Overview":
 
     with col_p2:
         st.image(
-            "a_Add_even_a_2_screen_.png",
+            "MULT.jpeg",
             use_container_width=True,
-            caption="Multi-Monitor Data Engineering & Analytics Command Center",
+            caption="NG Advisory Co. Enterprise Operations & Team Workspace",
         )
-        st.markdown("**Dual-Screen Enterprise Execution:** Integrating multi-table SQL queries, Jupyter Notebook Python pipelines, and executive Power BI reporting in real-time.")
+        st.markdown("**Collaborative Intelligence & Execution:** A unified advisory environment integrating enterprise analytics, continuous development, and cross-functional logistics execution.")
 
     col_p3, col_p4 = st.columns(2)
     with col_p3:
