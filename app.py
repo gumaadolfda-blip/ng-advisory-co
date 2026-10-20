@@ -256,7 +256,7 @@ elif section == "Global Logistics & Risk Intelligence":
         )
     with col_log2:
         st.image(
-            "powerbi.png",
+            "Screenshot 2026-02-28 091817.png",
             use_container_width=True,
             caption="Shipment Performance Dashboard | Geospatial Risk & Route Analysis",
         )
@@ -266,13 +266,13 @@ elif section == "Global Logistics & Risk Intelligence":
     col_lsub1, col_lsub2 = st.columns(2)
     with col_lsub1:
         st.image(
-            "logistics.png",
+            "logistics .png",
             use_container_width=True,
             caption="Logistics Performance Overview (Feb 2026)",
         )
     with col_lsub2:
         st.image(
-            "Screenshot 2026-02-28 093719.jpg",
+            "Screenshot 2026-02-28 093719.png",
             use_container_width=True,
             caption="Detailed Freight Cost & Status Breakdown",
         )
