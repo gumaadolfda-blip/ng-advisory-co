@@ -88,7 +88,7 @@ st.sidebar.markdown("+971 56 123 3978")
 st.sidebar.markdown("[LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
 st.sidebar.markdown("---")
 
-# Sidebar Navigation containing ALL projects and frameworks
+# Sidebar Navigation in clean order
 st.sidebar.markdown("### NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
@@ -265,8 +265,9 @@ elif section == "Global Logistics & Risk Intelligence":
     st.subheader("Foundational Logistics Views & Route Mapping")
     col_lsub1, col_lsub2 = st.columns(2)
     with col_lsub1:
+        # Fixed file name without accidental space to prevent FileNotFoundError
         st.image(
-            "logistics .png",
+            "logistics.png",
             use_container_width=True,
             caption="Logistics Performance Overview (Feb 2026)",
         )
