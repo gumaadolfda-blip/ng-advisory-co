@@ -158,20 +158,20 @@ if section == "Home & Overview":
 
     with col_p2:
         st.image(
+            "office.jpeg",
+            use_container_width=True,
+            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment",
+        )
+        st.markdown("**Client Consultation & Strategic Advisory:** Dedicated workspace tailored for executive sessions, operational audits, and stakeholder alignment.")
+
+    col_p3, col_p4 = st.columns(2)
+    with col_p3:
+        st.image(
             "MULT.jpeg",
             use_container_width=True,
             caption="NG Advisory Co. Enterprise Operations & Team Workspace",
         )
         st.markdown("**Collaborative Intelligence & Execution:** A unified advisory environment integrating enterprise analytics, continuous development, and cross-functional logistics execution.")
-
-    col_p3, col_p4 = st.columns(2)
-    with col_p3:
-        st.image(
-            "a_Change_the_words_on_.png",
-            use_container_width=True,
-            caption="Analytical Workspace & Advanced Statistics Studies",
-        )
-        st.markdown("**Rigorous Continuous Learning:** Mastering advanced statistical modeling, Bayes' theorem, hypothesis testing, and machine learning architectures from foundational data science coursework.")
 
     with col_p4:
         st.image(
