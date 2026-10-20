@@ -88,7 +88,7 @@ st.sidebar.markdown("+971 56 123 3978")
 st.sidebar.markdown("[LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
 st.sidebar.markdown("---")
 
-# Sidebar Navigation in clean order
+# Sidebar Navigation containing ALL projects and frameworks
 st.sidebar.markdown("### NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
@@ -206,7 +206,7 @@ if section == "Home & Overview":
     st.progress(92)
 
 elif section == "Superstore Supply Chain & Profitability":
-    st.header("📊 Superstore Supply Chain & Profitability Optimization")
+    st.header("Superstore Supply Chain & Profitability Optimization")
     st.write(
         "**Project Type:** Enterprise Power BI Commercial & Profit Margin Analysis"
     )
@@ -238,7 +238,7 @@ elif section == "Superstore Supply Chain & Profitability":
     )
 
 elif section == "Global Logistics & Risk Intelligence":
-    st.header("🌐 Global Logistics & Supply Chain Analysis Dashboard (2026)")
+    st.header("Global Logistics & Supply Chain Analysis Dashboard (2026)")
     st.write(
         "**Project Type:** Global Fulfillment Risk & Delivery Optimization Suite"
     )
@@ -265,7 +265,6 @@ elif section == "Global Logistics & Risk Intelligence":
     st.subheader("Foundational Logistics Views & Route Mapping")
     col_lsub1, col_lsub2 = st.columns(2)
     with col_lsub1:
-        # Fixed file name without accidental space to prevent FileNotFoundError
         st.image(
             "logistics.png",
             use_container_width=True,
@@ -279,7 +278,7 @@ elif section == "Global Logistics & Risk Intelligence":
         )
 
 elif section == "Global CO2 Emissions Analytics":
-    st.header("🌍 Global CO2 Emissions & Per Capita Intelligence Dashboard")
+    st.header("Global CO2 Emissions & Per Capita Intelligence Dashboard")
     st.write(
         "**Project Type:** Environmental Impact & Macro-Economic Power BI Suite"
     )
@@ -295,7 +294,7 @@ elif section == "Global CO2 Emissions Analytics":
     )
 
 elif section == "UAE Energy & Carbon Monoxide Engineering":
-    st.header("⚡ Energy Commodities & Carbon Monoxide Analytics")
+    st.header("Energy Commodities & Carbon Monoxide Analytics")
     st.write(
         "**Project Type:** Python Data Engineering & Power BI Executive Dashboard Suite"
     )
@@ -346,7 +345,7 @@ elif section == "UAE Energy & Carbon Monoxide Engineering":
         )
 
 elif section == "Remote Case Study: ROA":
-    st.header("🌍 Remote Client Engagement: Repair Our Air (ROA)")
+    st.header("Remote Client Engagement: Repair Our Air (ROA)")
     st.write(
         "**Role:** Lead Remote Data Scientist & Statistical Consultant (NG Advisory Co.)"
     )
@@ -366,7 +365,7 @@ elif section == "Remote Case Study: ROA":
     )
 
 elif section == "Tableau Public & Wildlife Analytics":
-    st.header("🦅 Tableau Public Portfolio & Wildlife Incident Analytics")
+    st.header("Tableau Public Portfolio & Wildlife Incident Analytics")
     st.write(
         "**Project Type:** Cloud-Published Interactive Vizzes & Spatial Aviation Safety Analysis"
     )
@@ -408,7 +407,7 @@ elif section == "Tableau Public & Wildlife Analytics":
         )
 
 elif section == "Weather & Lightning Risk Analysis":
-    st.header("⚡ Environmental Risk: Weather & Lightning Strike Analytics")
+    st.header("Environmental Risk: Weather & Lightning Strike Analytics")
     st.write(
         "**Project Type:** Exploratory Time-Series & Statistical Distribution Analysis"
     )
@@ -432,7 +431,7 @@ elif section == "Weather & Lightning Risk Analysis":
         )
 
 elif section == "Foundational BI Suite (Pharmacy & Retail)":
-    st.header("📈 Foundational Business Intelligence Suite")
+    st.header("Foundational Business Intelligence Suite")
     st.write(
         "**Project Type:** Early Commercial, Pharmacy, and Logistics Power BI Reports"
     )
@@ -476,7 +475,7 @@ elif section == "Foundational BI Suite (Pharmacy & Retail)":
         )
 
 elif section == "Data Products & Risk Simulation":
-    st.header("📦 Featured Data Products & Simulations")
+    st.header("Featured Data Products & Simulations")
     st.write(
         "Interactive analytics engines built to optimize fulfillment pathways and reduce late delivery risks."
     )
@@ -499,7 +498,7 @@ elif section == "Data Products & Risk Simulation":
         )
 
 elif section == "Client Portal & Feedback":
-    st.header("🔐 NG Advisory Co. | Client Portal, Account Creation & Resource Center")
+    st.header("NG Advisory Co. | Client Portal, Account Creation & Resource Center")
     st.write("Welcome to the secure global gateway. Create an account or log in to access confidential advisory frameworks, download proprietary assessment templates, and connect directly with our team.")
 
     tab_portal1, tab_portal2, tab_portal3, tab_portal4 = st.tabs([
@@ -614,7 +613,7 @@ elif section == "Client Portal & Feedback":
         st.info("We respond to all global client inquiries within 24 hours.")
 
 elif section == "Advisory Framework":
-    st.header("🏛️ Practical Systems & Business Control")
+    st.header("Practical Systems & Business Control")
     st.markdown("""
     * **Diagnostic Analytics & Bottleneck Identification:** Uncovering hidden friction points in warehouse execution and cargo transit.
     * **Experimental Design & Validation:** Implementing rigorous hypothesis testing, variance checks, and SciPy statistical validation.
