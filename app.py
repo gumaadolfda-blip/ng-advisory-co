@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page Configuration
 st.set_page_config(
-    page_title="NG Advisory Co. | Official Enterprise Platform",
+    page_title="Guma Adolf | NG Advisory Co. Platform",
     page_icon="📊",
     layout="wide",
 )
@@ -12,8 +12,8 @@ st.markdown(
     """
     <head>
         <meta property="og:image" content="https://raw.githubusercontent.com/gumaadolfda-blip/ng-advisory-co/main/Guma_Passport_Photo.JPG">
-        <meta property="og:title" content="NG Advisory Co. | Official Enterprise Platform">
-        <meta property="og:description" content="Official enterprise platform, supply chain analytics, and advisory solutions for NG Advisory Co. Led by Guma Adolf, Founder, CEO & Lead Operator.">
+        <meta property="og:title" content="Guma Adolf | NG Advisory Co. Platform">
+        <meta property="og:description" content="Interactive portfolio, supply chain analytics, and data products platform for NG Advisory Co.">
     </head>
     """,
     unsafe_allow_html=True,
@@ -64,9 +64,9 @@ st.markdown(
 
 # --- SIDEBAR CONTACT & ADVISORY ---
 st.sidebar.markdown("---")
-st.sidebar.subheader("📬 Corporate Headquarters")
-st.sidebar.markdown("**NG Advisory Co.**")
-st.sidebar.markdown("*Guma Adolf — Founder, CEO & Lead Operator*")
+st.sidebar.subheader("📬 Contact & Advisory")
+st.sidebar.markdown("**Guma Adolf**")
+st.sidebar.markdown("*Founder & Data Scientist, NG Advisory Co.*")
 st.sidebar.markdown("📧 [guma.adolf.da@gmail.com](mailto:guma.adolf.da@gmail.com)")
 st.sidebar.markdown("📱 +971 56 123 3978")
 st.sidebar.markdown("🔗 [LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
@@ -97,7 +97,7 @@ if section == "Home & Overview":
         st.image(
             "Guma_Passport_Photo.JPG",
             use_container_width=True,
-            caption="Guma Adolf | Founder, CEO & Lead Operator, NG Advisory Co.",
+            caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.",
         )
     with col_home_text:
         st.markdown(
@@ -105,7 +105,7 @@ if section == "Home & Overview":
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded, led, and operated by Guma Adolf.</div>',
+            '<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded & Architected by Guma Adolf.</div>',
             unsafe_allow_html=True,
         )
 
@@ -177,7 +177,7 @@ if section == "Home & Overview":
         st.image(
             "Guma_Passport_Photo.JPG",
             use_container_width=True,
-            caption="Guma Adolf | Founder, CEO & Lead Operator",
+            caption="Guma Adolf | Founder & Data Scientist",
         )
         st.markdown("**Vision & Leadership:** Directing enterprise digital transformation, bridging heavy operational logistics with modern predictive data science.")
 
@@ -491,6 +491,6 @@ elif section == "Advisory Framework":
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded, Led & Operated by Guma Adolf | Connected across the UAE</div>",
+    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded & Architected by Guma Adolf | Connected across the UAE</div>",
     unsafe_allow_html=True,
 )
