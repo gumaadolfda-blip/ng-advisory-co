@@ -62,21 +62,15 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- SESSION STATE INITIALIZATION ---
+# --- SESSION STATE INITIALIZATION FOR REVIEWS ---
 if "reviews_list" not in st.session_state:
     st.session_state.reviews_list = [
-        {"name": "Supply Chain Director, Global Logistics", "rating": "⭐⭐⭐⭐⭐", "comment": "Guma and NG Advisory Co. provided incredible clarity on our freight delay bottlenecks. Highly recommend their dashboard frameworks!"},
+        {"name": "Supply Chain Director, Dubai Logistics", "rating": "⭐⭐⭐⭐⭐", "comment": "Guma and NG Advisory Co. provided incredible clarity on our freight delay bottlenecks. Highly recommend their dashboard frameworks!"},
         {"name": "Operations Manager, FCL Freight", "rating": "⭐⭐⭐⭐⭐", "comment": "The automated data pipelines and risk models built for our inventory workflows completely transformed our daily execution."}
     ]
 
 if "client_logged_in" not in st.session_state:
     st.session_state.client_logged_in = False
-
-if "registered_accounts" not in st.session_state:
-    st.session_state.registered_accounts = {"guma.adolf.da@gmail.com": "password123"}
-
-if "user_email" not in st.session_state:
-    st.session_state.user_email = ""
 
 # --- SIDEBAR CONTACT & ADVISORY ---
 st.sidebar.markdown("---")
@@ -171,7 +165,7 @@ if section == "Home & Overview":
             use_container_width=True,
             caption="NG Advisory Co. Executive Command Center & Strategic Leadership Environment",
         )
-        st.markdown("**Field-Tested Logistics Execution & Advisory HQ:** Grounded in global supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
+        st.markdown("**Field-Tested Logistics Execution & Advisory HQ:** Grounded in heavy UAE supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
 
     with col_p2:
         st.image(
@@ -274,7 +268,7 @@ elif section == "Global Logistics & Risk Intelligence":
         st.image(
             "Screenshot 2026-02-28 093719.jpg",
             use_container_width=True,
-            caption="Detailed Freight Cost & Status Breakdown",
+            caption="Detailed UAE Freight Cost & Status Breakdown",
         )
 
 elif section == "Global CO2 Emissions Analytics":
@@ -294,12 +288,12 @@ elif section == "Global CO2 Emissions Analytics":
     )
 
 elif section == "UAE Energy & Carbon Monoxide Engineering":
-    st.header("⚡ Energy Commodities & Carbon Monoxide Analytics")
+    st.header("⚡ UAE Energy Commodities & Carbon Monoxide Analytics")
     st.write(
         "**Project Type:** Python Data Engineering & Power BI Executive Dashboard Suite"
     )
     st.write(
-        "**Scope:** Comprehensive multi-sector examination of energy commodities and historical Carbon Monoxide (CO) concentration trends across locations."
+        "**Scope:** Comprehensive multi-sector examination of UAE energy commodities and historical Carbon Monoxide (CO) concentration trends across emirates and location types."
     )
 
     st.markdown("---")
@@ -309,13 +303,13 @@ elif section == "UAE Energy & Carbon Monoxide Engineering":
         st.image(
             "Screenshot proje1.png",
             use_container_width=True,
-            caption="Energy Commodities Dashboard - Executive Overview",
+            caption="UAE Energy Commodities Dashboard - Executive Overview",
         )
     with col_e2:
         st.image(
             "Screenshot proje2.png",
             use_container_width=True,
-            caption="Energy Sector Commodity Deep Dive & Geographic Mapping",
+            caption="UAE Energy Sector Commodity Deep Dive & Geographic Mapping",
         )
 
     st.markdown("---")
@@ -325,12 +319,12 @@ elif section == "UAE Energy & Carbon Monoxide Engineering":
         st.image(
             "chart.png",
             use_container_width=True,
-            caption="Average CO Concentration Trend (2006–2016)",
+            caption="Average CO Concentration by Emirate (2006–2016)",
         )
         st.image(
             "plot.png",
             use_container_width=True,
-            caption="Annual Average Carbon Monoxide Trends",
+            caption="UAE Annual Average Carbon Monoxide Trends",
         )
     with col_c2:
         st.image(
@@ -441,11 +435,11 @@ elif section == "Foundational BI Suite (Pharmacy & Retail)":
     )
 
     with tab_f1:
-        st.subheader("Pharmacy Sales Analysis")
+        st.subheader("UAE Pharmacy Sales Analysis (Feb 2026)")
         st.image(
             "feb.png",
             use_container_width=True,
-            caption="Geographic Mapping & Product Profitability",
+            caption="Regional UAE Geographic Mapping & Product Profitability",
         )
         st.image(
             "Screenshot 2026-02-27 073605.png",
@@ -454,7 +448,7 @@ elif section == "Foundational BI Suite (Pharmacy & Retail)":
         )
 
     with tab_f2:
-        st.subheader("Retail Sales Dashboard")
+        st.subheader("Retail Sales Dashboard (Mar 2026)")
         st.image(
             "my.png",
             use_container_width=True,
@@ -498,69 +492,39 @@ elif section == "Data Products & Risk Simulation":
         )
 
 elif section == "Client Portal & Feedback":
-    st.header("🔐 NG Advisory Co. | Client Portal, Account Creation & Resource Center")
-    st.write("Welcome to the secure global gateway. Create an account or log in to access confidential advisory frameworks, download proprietary assessment templates, and connect directly with our team.")
+    st.header("🔐 NG Advisory Co. | Client Portal & Resource Center")
+    st.write("Welcome to the secure client gateway. Log in to access confidential advisory frameworks, download proprietary assessment templates, and share your feedback.")
 
-    tab_portal1, tab_portal2, tab_portal3, tab_portal4 = st.tabs([
-        "🔐 Client Login & Account Creation", 
-        "📥 Downloadable Assets", 
-        "💬 Reviews & Testimonials", 
-        "📞 Contact Us"
-    ])
+    tab_portal1, tab_portal2, tab_portal3 = st.tabs(["🔐 Client Portal Login", "📥 Downloadable Assets", "💬 Reviews & Testimonials"])
 
     with tab_portal1:
-        st.subheader("Client Portal Access")
-        auth_mode = st.radio("Select Action", ["Log In to Existing Account", "Create New Account"], horizontal=True)
-
-        if auth_mode == "Log In to Existing Account":
-            if not st.session_state.client_logged_in:
-                with st.form("login_form"):
-                    login_email = st.text_input("Email Address")
-                    login_pass = st.text_input("Passcode", type="password")
-                    submit_login = st.form_submit_button("Log In")
-                    
-                    if submit_login:
-                        if login_email in st.session_state.registered_accounts and st.session_state.registered_accounts[login_email] == login_pass:
-                            st.session_state.client_logged_in = True
-                            st.session_state.user_email = login_email
-                            st.success("Successfully authenticated! Welcome back to the global client dashboard.")
-                            st.rerun()
-                        else:
-                            st.error("Invalid email or passcode. Please check your credentials or create an account.")
-            else:
-                st.success(f"🟢 Logged in as: **{st.session_state.user_email}**")
-                st.info("🔓 **Exclusive Client Workspace:** Access to confidential logistics optimization models and direct consultation scheduling is currently unlocked.")
-                if st.button("Log Out"):
-                    st.session_state.client_logged_in = False
-                    st.session_state.user_email = ""
-                    st.rerun()
-        else:
-            # Create Account Form
-            st.subheader("Register a New Global Client Account")
-            with st.form("signup_form"):
-                new_email = st.text_input("Enter Email Address")
-                new_pass = st.text_input("Create Passcode", type="password")
-                confirm_pass = st.text_input("Confirm Passcode", type="password")
-                submit_signup = st.form_submit_button("Create Account")
-
-                if submit_signup:
-                    if not new_email or not new_pass:
-                        st.warning("Please fill out all fields.")
-                    elif new_email in st.session_state.registered_accounts:
-                        st.error("An account with this email already exists. Please log in.")
-                    elif new_pass != confirm_pass:
-                        st.error("Passcodes do not match. Please re-enter.")
-                    else:
-                        st.session_state.registered_accounts[new_email] = new_pass
+        st.subheader("Client Authentication")
+        if not st.session_state.client_logged_in:
+            with st.form("login_form"):
+                client_email = st.text_input("Client Email Address")
+                client_pass = st.text_input("Access Passcode", type="password")
+                submit_login = st.form_submit_button("Access Portal")
+                
+                if submit_login:
+                    if client_email and client_pass:
                         st.session_state.client_logged_in = True
-                        st.session_state.user_email = new_email
-                        st.success("Account created successfully! You are now logged in.")
+                        st.session_state.user_email = client_email
+                        st.success("Successfully authenticated! Welcome to the exclusive client dashboard.")
                         st.rerun()
+                    else:
+                        st.warning("Please enter your email and passcode to proceed.")
+        else:
+            st.success(f"🟢 Logged in as: **{st.session_state.user_email}**")
+            st.info("🔓 **Exclusive Client Workspace:** Access to confidential logistics optimization models and direct consultation scheduling is currently unlocked.")
+            if st.button("Log Out"):
+                st.session_state.client_logged_in = False
+                st.rerun()
 
     with tab_portal2:
         st.subheader("Proprietary Advisory Templates & Resources")
         st.write("Download field-tested logistics audit checklists and analytics templates crafted by NG Advisory Co.")
         
+        # Sample data for download
         sample_csv = "Metric,Target,Status\nInventory Accuracy,>85%,Optimal\nSOP Compliance,92%,Compliant\nLate Delivery Risk,<5%,Controlled"
         st.download_button(
             label="📄 Download Logistics Audit Checklist (CSV)",
@@ -569,7 +533,7 @@ elif section == "Client Portal & Feedback":
             mime="text/csv",
         )
 
-        sample_whitepaper = "NG Advisory Co. Enterprise Whitepaper:\nBridging Raw Data and Logistics Visibility through Python & SQL Automation.\nAuthor: Guma Adolf, Founder, CEO & Lead Operator."
+        sample_whitepaper = "NG Advisory Co. Enterprise Whitepaper:\nBridging Raw Data and Logistics Visibility through Python & SQL Automation.\nAuthor: Guma Adolf, Founder."
         st.download_button(
             label="📘 Download Enterprise Advisory Whitepaper (TXT)",
             data=sample_whitepaper,
@@ -578,13 +542,15 @@ elif section == "Client Portal & Feedback":
         )
 
     with tab_portal3:
-        st.subheader("Client Feedback & Global Reviews")
+        st.subheader("Client Feedback & Reviews")
         st.write("See what partners and logistics operators are saying about our engagements, or leave your own review below!")
         
+        # Display existing reviews
         for rev in st.session_state.reviews_list:
             st.markdown(f"> **{rev['name']}**  \n> {rev['rating']}  \n> *\"{rev['comment']}\"*")
             st.markdown("---")
 
+        # Form to submit a new review
         st.subheader("Leave a Review or Inquiry")
         with st.form("review_form"):
             reviewer_name = st.text_input("Your Name / Company")
@@ -601,17 +567,6 @@ elif section == "Client Portal & Feedback":
                 else:
                     st.warning("Please fill in both your name and feedback comment before submitting.")
 
-    with tab_portal4:
-        st.subheader("📞 Direct Contact & Enterprise Inquiries")
-        st.write("Have a custom project or enterprise advisory requirement? Reach out directly to our headquarters:")
-        st.markdown("""
-        * **Founder, CEO & Lead Operator:** Guma Adolf
-        * **Direct Mobile / WhatsApp:** +971 56 123 3978
-        * **Official Email:** guma.adolf.da@gmail.com
-        * **Global Network:** LinkedIn (`https://www.linkedin.com/in/gumadolf`)
-        """)
-        st.info("💡 We respond to all global client inquiries within 24 hours.")
-
 elif section == "Advisory Framework":
     st.header("🏛️ Practical Systems & Business Control")
     st.markdown("""
@@ -620,9 +575,9 @@ elif section == "Advisory Framework":
     * **Automation & Control Dashboards:** Building real-time data products that eliminate manual reporting friction.
     """)
 
-# Footer with updated contact info, year 2026, and Worldwide branding
+# Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded, Led & Operated by Guma Adolf | 📱 +971 56 123 3978 | 📧 guma.adolf.da@gmail.com | Worldwide</div>",
+    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded & Architected by Guma Adolf | Connected across the UAE</div>",
     unsafe_allow_html=True,
 )
