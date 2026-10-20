@@ -67,7 +67,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("📬 Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
 st.sidebar.markdown("*Founder & Data Scientist, NG Advisory Co.*")
-st.sidebar.markdown("📧 [guma.adolf.da@email.com](mailto:guma.adolf.da@email.com)")
+st.sidebar.markdown("📧 [guma.adolf.da@gmail.com](mailto:guma.adolf.da@gmail.com)")
 st.sidebar.markdown("📱 +971 56 123 3978")
 st.sidebar.markdown("🔗 [LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
 st.sidebar.markdown("---")
@@ -150,11 +150,11 @@ if section == "Home & Overview":
     col_p1, col_p2 = st.columns(2)
     with col_p1:
         st.image(
-            "office.jpeg",
+            "NG.jpeg",
             use_container_width=True,
-            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment",
+            caption="NG Advisory Co. Executive Command Center & Strategic Leadership Environment",
         )
-        st.markdown("**Field-Tested Logistics Execution:** Grounded in heavy UAE supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
+        st.markdown("**Field-Tested Logistics Execution & Advisory HQ:** Grounded in heavy UAE supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
 
     with col_p2:
         st.image(
