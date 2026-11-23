@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-# Page Configuration & Metadata
 st.set_page_config(
     page_title="Guma Adolf | NG Advisory Co. Platform",
     page_icon="📊",
@@ -29,7 +28,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Session State Initialization
 if "reviews_list" not in st.session_state:
     st.session_state.reviews_list = [
         {"name": "Supply Chain Director, Global Logistics", "rating": "⭐⭐⭐⭐⭐", "comment": "Guma and NG Advisory Co. provided incredible clarity on our freight delay bottlenecks. Highly recommend their dashboard frameworks!"},
@@ -43,7 +41,6 @@ if "registered_accounts" not in st.session_state:
 if "user_email" not in st.session_state:
     st.session_state.user_email = ""
 
-# Sidebar Navigation & Contact Info
 st.sidebar.markdown("---")
 st.sidebar.subheader("Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
@@ -73,14 +70,11 @@ section = st.sidebar.radio(
     ],
 )
 
-# Main Section Routing Logic
 if section == "Home & Overview":
     col_home_img, col_home_text = st.columns([1, 2], gap="medium")
-    with col_home_img:
-        st.image("Guma_Passport_Photo.JPG", use_container_width=True, caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.")
-    with col_home_text:
-        st.markdown('<div class="hero-title">Build better business control without overcomplicating operations.</div>', unsafe_allow_html=True)
-        st.markdown('<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded & Architected by Guma Adolf.</div>', unsafe_allow_html=True)
+    col_home_img.image("Guma_Passport_Photo.JPG", use_container_width=True, caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.")
+    col_home_text.markdown('<div class="hero-title">Build better business control without overcomplicating operations.</div>', unsafe_allow_html=True)
+    col_home_text.markdown('<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded & Architected by Guma Adolf.</div>', unsafe_allow_html=True)
 
     st.markdown("---")
     col1, col2, col3 = st.columns(3)
@@ -91,20 +85,16 @@ if section == "Home & Overview":
     st.markdown("---")
     st.markdown("### Executive Command Center & Professional Gallery")
     col_p1, col_p2 = st.columns(2)
-    with col_p1:
-        st.image("NG.jpeg", use_container_width=True, caption="NG Advisory Co. Executive Command Center & Strategic Leadership Environment")
-        st.markdown("**Field-Tested Logistics Execution & Advisory HQ:** Grounded in global supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
-    with col_p2:
-        st.image("office.jpeg", use_container_width=True, caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment")
-        st.markdown("**Client Consultation & Strategic Advisory:** Dedicated workspace tailored for executive sessions, operational audits, and stakeholder alignment.")
+    col_p1.image("NG.jpeg", use_container_width=True, caption="NG Advisory Co. Executive Command Center & Strategic Leadership Environment")
+    col_p1.markdown("**Field-Tested Logistics Execution & Advisory HQ:** Grounded in global supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
+    col_p2.image("office.jpeg", use_container_width=True, caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment")
+    col_p2.markdown("**Client Consultation & Strategic Advisory:** Dedicated workspace tailored for executive sessions, operational audits, and stakeholder alignment.")
 
     col_p3, col_p4 = st.columns(2)
-    with col_p3:
-        st.image("MULT.jpeg", use_container_width=True, caption="NG Advisory Co. Enterprise Operations & Team Workspace")
-        st.markdown("**Collaborative Intelligence & Execution:** A unified advisory environment integrating enterprise analytics, continuous development, and cross-functional logistics execution.")
-    with col_p4:
-        st.image("Guma_Passport_Photo.JPG", use_container_width=True, caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.")
-        st.markdown("**Vision & Leadership:** Directing enterprise digital transformation, bridging heavy operational logistics with modern predictive data science.")
+    col_p3.image("MULT.jpeg", use_container_width=True, caption="NG Advisory Co. Enterprise Operations & Team Workspace")
+    col_p3.markdown("**Collaborative Intelligence & Execution:** A unified advisory environment integrating enterprise analytics, continuous development, and cross-functional logistics execution.")
+    col_p4.image("Guma_Passport_Photo.JPG", use_container_width=True, caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.")
+    col_p4.markdown("**Vision & Leadership:** Directing enterprise digital transformation, bridging heavy operational logistics with modern predictive data science.")
 
     st.markdown("---")
     st.markdown("### Live Operational Control Preview")
@@ -159,4 +149,6 @@ elif section == "Superstore Supply Chain & Profitability":
     st.write("**Project Type:** Enterprise Power BI Commercial & Profit Margin Analysis")
     st.markdown("---")
     col_sup1, col_sup2 = st.columns(2)
-    with col_sup1:
+    col_sup1.image("Screenshot 2026-07-01 095504.png", use_container_width=True, caption="Superstore Executive View | Sales Revenue & Segment Margins")
+    col_sup2.image("Screenshot 2026-07-01 095527.png", use_container_width=True, caption="Superstore Shipping Mode & Regional Profitability Breakdown")
+    st.markdown("---")
