@@ -93,9 +93,6 @@ st.sidebar.markdown("### NG Advisory Co.")
 section = st.sidebar.radio(
     "Navigation",
     [
-       section = st.sidebar.radio(
-    "Navigation",
-    [
         "Home & Overview",
         "UAE NetZero Freight AI (Maritime)",
         "Superstore Supply Chain & Profitability",
