@@ -1,41 +1,35 @@
 import streamlit as st
 import pandas as pd
 
-# Page Configuration
+# Page Configuration & Metadata
 st.set_page_config(
     page_title="Guma Adolf | NG Advisory Co. Platform",
     page_icon="📊",
     layout="wide",
 )
 
-# --- OPEN GRAPH META TAGS FOR LINK PREVIEWS ---
 st.markdown(
-    """
-    <head>
-        <meta property="og:image" content="https://githubusercontent.com">
-        <meta property="og:title" content="Guma Adolf | NG Advisory Co. Platform">
-        <meta property="og:description" content="Interactive portfolio, supply chain analytics, and data products platform for NG Advisory Co.">
-    </head>
-    """,
+    '<head>'
+    '<meta property="og:image" content="https://githubusercontent.com">'
+    '<meta property="og:title" content="Guma Adolf | NG Advisory Co. Platform">'
+    '<meta property="og:description" content="Interactive portfolio, supply chain analytics, and data products platform for NG Advisory Co.">'
+    '</head>',
     unsafe_allow_html=True,
 )
 
-# Custom CSS for Elite SaaS Dark Theme Styling
 st.markdown(
-    """
-    <style>
-    .stApp { background-color: #0b0f19; color: #f3f4f6; }
-    .hero-title { font-size: 2.8rem; font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 20px; }
-    .hero-subtitle { font-size: 1.1rem; color: #9ca3af; margin-bottom: 30px; }
-    .metric-card { background-color: #111827; border: 1px solid #1f2937; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-    .metric-value { font-size: 1.8rem; font-weight: 700; color: #38bdf8; }
-    .metric-label { font-size: 0.85rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
-    </style>
-    """,
+    '<style>'
+    '.stApp { background-color: #0b0f19; color: #f3f4f6; }'
+    '.hero-title { font-size: 2.8rem; font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 20px; }'
+    '.hero-subtitle { font-size: 1.1rem; color: #9ca3af; margin-bottom: 30px; }'
+    '.metric-card { background-color: #111827; border: 1px solid #1f2937; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }'
+    '.metric-value { font-size: 1.8rem; font-weight: 700; color: #38bdf8; }'
+    '.metric-label { font-size: 0.85rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }'
+    '</style>',
     unsafe_allow_html=True,
 )
 
-# --- SESSION STATE INITIALIZATION ---
+# Session State Initialization
 if "reviews_list" not in st.session_state:
     st.session_state.reviews_list = [
         {"name": "Supply Chain Director, Global Logistics", "rating": "⭐⭐⭐⭐⭐", "comment": "Guma and NG Advisory Co. provided incredible clarity on our freight delay bottlenecks. Highly recommend their dashboard frameworks!"},
@@ -44,25 +38,22 @@ if "reviews_list" not in st.session_state:
 
 if "client_logged_in" not in st.session_state:
     st.session_state.client_logged_in = False
-
 if "registered_accounts" not in st.session_state:
     st.session_state.registered_accounts = {"guma.adolf.da@gmail.com": "password123"}
-
 if "user_email" not in st.session_state:
     st.session_state.user_email = ""
 
-# --- SIDEBAR CONTACT & ADVISORY ---
+# Sidebar Navigation & Contact Info
 st.sidebar.markdown("---")
 st.sidebar.subheader("Contact & Advisory")
 st.sidebar.markdown("**Guma Adolf**")
 st.sidebar.markdown("*Founder & Lead Data Architect, NG Advisory Co.*")
 st.sidebar.markdown("guma.adolf.da@gmail.com")
 st.sidebar.markdown("+971 56 123 3978")
-st.sidebar.markdown("[LinkedIn Profile](https://www.linkedin.com/in/gumadolf)")
+st.sidebar.markdown("[LinkedIn Profile](https://linkedin.com)")
 st.sidebar.markdown("---")
-
-# Sidebar Navigation containing ALL projects and frameworks
 st.sidebar.markdown("### NG Advisory Co.")
+
 section = st.sidebar.radio(
     "Navigation",
     [
@@ -82,6 +73,7 @@ section = st.sidebar.radio(
     ],
 )
 
+# Main Section Routing Logic
 if section == "Home & Overview":
     col_home_img, col_home_text = st.columns([1, 2], gap="medium")
     with col_home_img:
@@ -92,17 +84,12 @@ if section == "Home & Overview":
 
     st.markdown("---")
     col1, col2, col3 = st.columns(3)
-    with col1:
-        st.markdown('<div class="metric-card"><div class="metric-label">Logistics Scale Handled</div><div class="metric-value">AED 36M+</div></div>', unsafe_allow_html=True)
-    with col2:
-        st.markdown('<div class="metric-card"><div class="metric-label">SOP Compliance Target</div><div class="metric-value">92%</div></div>', unsafe_allow_html=True)
-    with col3:
-        st.markdown('<div class="metric-card"><div class="metric-label">Core Tech Stack</div><div class="metric-value" style="font-size: 1.3rem;">Python • SQL • BI • AI</div></div>', unsafe_allow_html=True)
+    col1.markdown('<div class="metric-card"><div class="metric-label">Logistics Scale Handled</div><div class="metric-value">AED 36M+</div></div>', unsafe_allow_html=True)
+    col2.markdown('<div class="metric-card"><div class="metric-label">SOP Compliance Target</div><div class="metric-value">92%</div></div>', unsafe_allow_html=True)
+    col3.markdown('<div class="metric-card"><div class="metric-label">Core Tech Stack</div><div class="metric-value" style="font-size: 1.3rem;">Python • SQL • BI • AI</div></div>', unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown("### Executive Command Center & Professional Gallery")
-    st.markdown("Explore the operational environments and professional milestones driving NG Advisory Co.:")
-
     col_p1, col_p2 = st.columns(2)
     with col_p1:
         st.image("NG.jpeg", use_container_width=True, caption="NG Advisory Co. Executive Command Center & Strategic Leadership Environment")
@@ -138,8 +125,6 @@ elif section == "UAE NetZero Freight AI (Maritime)":
 
     st.markdown("---")
     st.subheader("Interactive UAE Port Decarbonization Simulator")
-    st.write("Adjust AI 'Just-in-Time' arrival optimization and marine fuel price to simulate national savings across all 15 UAE ports:")
-
     sim_col1, sim_col2 = st.columns(2)
     jit_reduction_pct = sim_col1.slider("AI Just-in-Time Anchorage Idling Reduction (%)", 5, 35, 15, 1)
     fuel_price_aed = sim_col2.number_input("Marine VLSFO Fuel Price (AED / Metric Ton)", 1500, 3500, 2200, 50)
@@ -164,8 +149,14 @@ elif section == "UAE NetZero Freight AI (Maritime)":
     st.dataframe(port_df, use_container_width=True, hide_index=True)
 
     st.markdown("---")
-    st.markdown(
-        """
-        ### Executive Architecture & Source Repository
-        * **Data Integration:** Merged **IMF PortWatch** daily vessel calls, **Bayanat.ae** monthly UAE trade figures (~134.6B AED benchmark), and **DataCo** delay risk benchmarks across **43,020 records**.
-        * **Machine Learning & Explainability:** Chronological `RandomForestRegressor` (83% weight on 7-day rolling tonnage + tanker/container calls) paired with an `81.1%` accurate Congestion Surge Classifier.
+    st.markdown("### Executive Architecture & Source Repository")
+    st.markdown("* **Data Integration:** Merged **IMF PortWatch** daily vessel calls, **Bayanat.ae** monthly UAE trade figures, and **DataCo** delay risk benchmarks across **43,020 records**.")
+    st.markdown("* **Machine Learning & Explainability:** Chronological `RandomForestRegressor` paired with an `81.1%` accurate Congestion Surge Classifier.")
+    st.markdown("* **Full Code & Jupyter Notebook:** [View on GitHub (`gumaadolf-blip/uae-netzero-freight-ai`)](https://github.com)")
+
+elif section == "Superstore Supply Chain & Profitability":
+    st.header("Superstore Supply Chain & Profitability Optimization")
+    st.write("**Project Type:** Enterprise Power BI Commercial & Profit Margin Analysis")
+    st.markdown("---")
+    col_sup1, col_sup2 = st.columns(2)
+    with col_sup1:
