@@ -94,7 +94,6 @@ section = st.sidebar.radio(
     "Navigation",
     [
         "Home & Overview",
-        "UAE NetZero Freight AI (Maritime)",
         "Superstore Supply Chain & Profitability",
         "Global Logistics & Risk Intelligence",
         "Global CO2 Emissions Analytics",
@@ -109,117 +108,102 @@ section = st.sidebar.radio(
     ],
 )
 
+if section == "Home & Overview":
+    col_home_img, col_home_text = st.columns([1, 2], gap="medium")
+    with col_home_img:
+        st.image(
+            "Guma_Passport_Photo.JPG",
+            use_container_width=True,
+            caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.",
+        )
+    with col_home_text:
+        st.markdown(
+            '<div class="hero-title">Build better business control without overcomplicating operations.</div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            '<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded & Architected by Guma Adolf.</div>',
+            unsafe_allow_html=True,
+        )
 
-elif section == "UAE NetZero Freight AI (Maritime)":
-    st.markdown(
-        '<div class="hero-title">UAE NetZero Freight: Maritime Decarbonization & Supply Chain AI</div>',
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        '<div class="hero-subtitle">Multi-Source Machine Learning & Generative AI Engine across 15 UAE Ports (43,020 Port-Day Records) | Aligned with UAE Net Zero 2050 & Federal Decree-Law No. 11/2023.</div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown("---")
 
-    # Top KPI Metric Cards matching NG Advisory Co. SaaS Dark Theme
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
+    col1, col2, col3 = st.columns(3)
+    with col1:
         st.markdown(
             """
             <div class="metric-card">
-                <div class="metric-label">Projected Annual Fuel ROI</div>
-                <div class="metric-value">AED 6.49M</div>
+                <div class="metric-label">Logistics Scale Handled</div>
+                <div class="metric-value">AED 36M+</div>
             </div>
             """,
             unsafe_allow_html=True,
         )
-    with c2:
+    with col2:
         st.markdown(
             """
             <div class="metric-card">
-                <div class="metric-label">Annual CO₂ Abated</div>
-                <div class="metric-value">9,287 Tons</div>
+                <div class="metric-label">SOP Compliance Target</div>
+                <div class="metric-value">92%</div>
             </div>
             """,
             unsafe_allow_html=True,
         )
-    with c3:
+    with col3:
         st.markdown(
             """
             <div class="metric-card">
-                <div class="metric-label">Surge Alert Accuracy</div>
-                <div class="metric-value">81.1%</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-    with c4:
-        st.markdown(
-            """
-            <div class="metric-card">
-                <div class="metric-label">National Forecast MAE</div>
-                <div class="metric-value">24,522 Tons</div>
+                <div class="metric-label">Core Tech Stack</div>
+                <div class="metric-value" style="font-size: 1.3rem;">Python • SQL • BI</div>
             </div>
             """,
             unsafe_allow_html=True,
         )
 
     st.markdown("---")
+    st.markdown("### Executive Command Center & Professional Gallery")
+    st.markdown("Explore the operational environments and professional milestones driving NG Advisory Co.:")
 
-    # Interactive Decarbonization & Fuel ROI Simulator for UAE Port Leaders
-    st.subheader("Interactive UAE Port Decarbonization Simulator")
-    st.write("Adjust AI 'Just-in-Time' arrival optimization and marine fuel price to simulate national savings across all 15 UAE ports:")
-
-    sim_col1, sim_col2 = st.columns(2)
-    with sim_col1:
-        jit_reduction_pct = st.slider(
-            "AI Just-in-Time Anchorage Idling Reduction (%)",
-            min_value=5,
-            max_value=35,
-            value=15,
-            step=1,
+    col_p1, col_p2 = st.columns(2)
+    with col_p1:
+        st.image(
+            "NG.jpeg",
+            use_container_width=True,
+            caption="NG Advisory Co. Executive Command Center & Strategic Leadership Environment",
         )
-    with sim_col2:
-        fuel_price_aed = st.number_input(
-            "Marine VLSFO Fuel Price (AED / Metric Ton)",
-            min_value=1500,
-            max_value=3500,
-            value=2200,
-            step=50,
+        st.markdown("**Field-Tested Logistics Execution & Advisory HQ:** Grounded in global supply chain operations managing AED 36M+ scale, freight handling, and exception resolution.")
+
+    with col_p2:
+        st.image(
+            "office.jpeg",
+            use_container_width=True,
+            caption="NG Advisory Co. Strategic Leadership & Client Consultation Environment",
         )
+        st.markdown("**Client Consultation & Strategic Advisory:** Dedicated workspace tailored for executive sessions, operational audits, and stakeholder alignment.")
 
-    # Baseline 7-day unoptimized idling CO2 across 15 UAE ports = 178.6 / 0.15 = 1,190.67 tons
-    baseline_7d_idle_co2 = 1190.67
-    sim_co2_7d = baseline_7d_idle_co2 * (jit_reduction_pct / 100.0)
-    sim_co2_annual = sim_co2_7d * 52
-    sim_fuel_annual = sim_co2_annual / 3.15
-    sim_aed_annual = sim_fuel_annual * fuel_price_aed
+    col_p3, col_p4 = st.columns(2)
+    with col_p3:
+        st.image(
+            "MULT.jpeg",
+            use_container_width=True,
+            caption="NG Advisory Co. Enterprise Operations & Team Workspace",
+        )
+        st.markdown("**Collaborative Intelligence & Execution:** A unified advisory environment integrating enterprise analytics, continuous development, and cross-functional logistics execution.")
 
-    res1, res2, res3 = st.columns(3)
-    res1.metric("Simulated Annual CO₂ Reduced", f"{sim_co2_annual:,.0f} Metric Tons")
-    res2.metric("Simulated Marine Fuel Saved", f"{sim_fuel_annual:,.0f} Metric Tons")
-    res3.metric("Simulated Annual Savings (AED)", f"AED {sim_aed_annual:,.0f}")
+    with col_p4:
+        st.image(
+            "Guma_Passport_Photo.JPG",
+            use_container_width=True,
+            caption="Guma Adolf | Founder & Lead Data Architect, NG Advisory Co.",
+        )
+        st.markdown("**Vision & Leadership:** Directing enterprise digital transformation, bridging heavy operational logistics with modern predictive data science.")
 
     st.markdown("---")
-
-    # Port-Level Hotspot Breakdown Table
-    st.subheader("Top UAE Maritime Carbon & Throughput Hotspots (7-Day Horizon)")
-    port_data = {
-        "UAE Port": ["Port of Fujairah", "Jebel Ali (Dubai)", "Khalifa Port (Abu Dhabi)", "Khor Fakkan", "Sharjah"],
-        "Primary Traffic Profile": ["Energy Tankers & Bunkering", "Container Mega-Hub", "Industrial & Container", "Transshipment Container", "General Cargo & Regional"],
-        "Predicted Daily Tonnage": ["216,053 tons/day", "59,012 tons/day", "28,450 tons/day", "24,180 tons/day", "15,920 tons/day"],
-        "7-Day CO₂ Saved (15% JIT)": ["55.9 tons", "43.7 tons", "14.2 tons", "13.9 tons", "9.4 tons"],
-    }
-    st.dataframe(port_data, use_container_width=True, hide_index=True)
-
-    st.markdown("---")
-    st.markdown(
-        """
-        ### Executive Architecture & Source Repository
-        * **Data Integration:** Merged **IMF PortWatch** daily vessel calls, **Bayanat.ae** monthly UAE trade figures (~134.6B AED benchmark), and **DataCo** delay risk benchmarks across **43,020 records**.
-        * **Machine Learning & Explainability:** Chronological `RandomForestRegressor` (83% weight on 7-day rolling tonnage + tanker/container calls) paired with an `81.1%` accurate Congestion Surge Classifier.
-        * **Full Code & Jupyter Notebook:** [View on GitHub (`gumaadolf-blip/uae-netzero-freight-ai`)](https://github.com)
-        """
-    )
+    st.markdown("### Live Operational Control Preview")
+    st.text("Inventory Accuracy (Target: >85%)")
+    st.progress(86)
+    st.text("SOP Compliance & Governance")
+    st.progress(92)
 
 elif section == "Superstore Supply Chain & Profitability":
     st.header("Superstore Supply Chain & Profitability Optimization")
