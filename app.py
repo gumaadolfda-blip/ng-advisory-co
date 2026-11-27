@@ -738,6 +738,6 @@ elif section == "Advisory Framework":
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded & Architected by Guma Adolf | +971 56 123 3978 | guma.adolf.da@gmail.com | Worldwide</div>",
+    "<div style='text-align: center; color: #6b7280; font-size: 0.85rem;'>© 2026 NG Advisory Co. | Founded & Architected by Guma Adolf | +971 56 123 3978 | guma.adolf.da@gmail.com</div>",
     unsafe_allow_html=True,
 )
