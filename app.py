@@ -118,21 +118,18 @@ NAV_ITEMS = [
 section = st.sidebar.radio("Navigation", NAV_ITEMS)
 
 if section == "Home & Overview":
-    col_home_img, col_home_text = st.columns([1, 2], gap="medium")
-    with col_home_img:
-        render_image_safe(
-            "NG logo.jpeg",
-            "NG Advisory Co. | Guma Adolf, Founder & Lead Data Architect",
-        )
-    with col_home_text:
-        st.markdown(
-            '<div class="hero-title">Build better business control without overcomplicating operations.</div>',
-            unsafe_allow_html=True,
-        )
-        st.markdown(
-            '<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded & Architected by Guma Adolf.</div>',
-            unsafe_allow_html=True,
-        )
+    render_image_safe(
+        "NG logo.jpeg",
+        "NG Advisory Co. | Guma Adolf, Founder & Lead Data Architect",
+    )
+    st.markdown(
+        '<div class="hero-title">Build better business control without overcomplicating operations.</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<div class="hero-subtitle">SOPs, warehouse controls, reporting automation, data products, and statistical modeling for enterprises that need clarity, structure, and execution velocity. Founded & Architected by Guma Adolf.</div>',
+        unsafe_allow_html=True,
+    )
 
     st.markdown("---")
     col1, col2, col3 = st.columns(3)
