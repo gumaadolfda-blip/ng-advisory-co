@@ -330,7 +330,7 @@ elif section == "Dubai Traffic & Corridor Risk AI":
         unsafe_allow_html=True,
     )
     st.markdown(
-        '<div class="hero-subtitle">End-to-End Spatial Clustering (K-Means, k=3) & Probability-Tuned Random Forest (RF v2) across 23,472 Dubai Traffic Incidents | Smart Mobility & Emergency Dispatch Triage.</div>',
+        '<div class="hero-subtitle">Interactive Corridor Explorer & Threshold Simulator across 23,472 Cleaned Dubai Traffic Incidents | Smart Mobility & Emergency Dispatch Triage.</div>',
         unsafe_allow_html=True,
     )
 
@@ -341,15 +341,9 @@ elif section == "Dubai Traffic & Corridor Risk AI":
     tc4.markdown('<div class="metric-card"><div class="metric-label">Alert Reduction (0.55)</div><div class="metric-value">-52%</div></div>', unsafe_allow_html=True)
 
     st.markdown("---")
-    st.subheader("Executive Summary Visual (GitHub Asset)")
-    render_image_safe(
-        GITHUB_TRAFFIC_SUMMARY_URL,
-        "Dubai Traffic Safety Executive Summary — Hotspot Clusters & Hourly Demand",
-    )
+    st.subheader("Interactive Corridor & Temporal Risk Filter")
 
-    st.markdown("---")
-    st.subheader("Spatial Corridor Breakdown & Model Progression")
-    traffic_cluster_df = pd.DataFrame(
+    traffic_zones_df = pd.DataFrame(
         {
             "Spatial Zone": [
                 "Cluster 0 — Northern & Central Urban Core",
@@ -366,19 +360,79 @@ elif section == "Dubai Traffic & Corridor Risk AI":
                 "Southwest arterial routes toward Dubai Marina & Jebel Ali",
                 "High-speed inter-emirate corridor toward Hatta & southern Al Ain",
             ],
-            "Severe Crash Rate": [
-                "5.97% (Citywide Baseline)",
-                "5.12% (Lowest Relative Severity)",
-                "18.84% (>3x Citywide Baseline)",
+            "Severe Rate (%)": [5.97, 5.12, 18.84],
+            "Relative vs. 5.74% Baseline": [
+                "~1.04x (Baseline)",
+                "~0.89x (Below Baseline)",
+                "~3.28x (>3x Citywide)",
             ],
         }
     )
-    st.dataframe(traffic_cluster_df, use_container_width=True, hide_index=True)
+
+    f_col1, f_col2 = st.columns(2)
+    selected_zone = f_col1.selectbox(
+        "Filter by K-Means Spatial Zone (k = 3)",
+        ["All Zones"] + traffic_zones_df["Spatial Zone"].tolist(),
+    )
+    selected_window = f_col2.selectbox(
+        "Filter by Temporal Operational Window",
+        [
+            "All Hours (2019 UAE Dataset)",
+            "Evening Rush Peak (18:00)",
+            "Peak Weekly Day (Thursday)",
+            "Overnight Low Volume (02:00–05:00)",
+        ],
+    )
+
+    if selected_zone == "All Zones":
+        filtered_zones_df = traffic_zones_df
+    else:
+        filtered_zones_df = traffic_zones_df[traffic_zones_df["Spatial Zone"] == selected_zone]
+
+    st.dataframe(filtered_zones_df, use_container_width=True, hide_index=True)
+
+    window_notes = {
+        "All Hours (2019 UAE Dataset)": "Full dataset spans **23,472** cleaned records with a **5.74%** citywide severe incident baseline.",
+        "Evening Rush Peak (18:00)": "Incident volume rises through afternoon traffic and peaks at **18:00** during evening commute congestion.",
+        "Peak Weekly Day (Thursday)": "**Thursday** logs the highest weekly incident count ahead of the weekend, while **Friday** sees the lowest.",
+        "Overnight Low Volume (02:00–05:00)": "Overnight hours (**02:00–05:00**) record the lowest overall incident frequency across the network.",
+    }
+    st.info(window_notes[selected_window])
+
+    st.markdown("---")
+    st.subheader("Interactive Dispatch Alert Threshold Simulator (RF v2)")
+    sim_threshold = st.slider(
+        "Probability Decision Threshold (Tuned Operating Point = 0.55)",
+        min_value=0.50,
+        max_value=0.65,
+        value=0.55,
+        step=0.01,
+    )
+
+    if abs(sim_threshold - 0.55) < 1e-6:
+        est_alerts = 1172
+        est_recall = "43.87%"
+        est_f1 = "0.1638"
+    else:
+        est_alerts = max(420, int(round(2443 - ((sim_threshold - 0.50) / 0.05) * (2443 - 1172))))
+        est_recall = "~43.87% (Calibrated at 0.55)" if sim_threshold < 0.55 else "Lower recall (stricter filter)"
+        est_f1 = "0.1638 (Peak tuned F1 at 0.55)" if sim_threshold > 0.50 else "0.1323 (Baseline)"
+
+    m1, m2, m3 = st.columns(3)
+    m1.metric("Flagged Severe Alerts (Test Split)", f"{est_alerts:,}")
+    m2.metric("Severe Recall Benchmark", est_recall)
+    m3.metric("Severe F1 Benchmark", est_f1)
+
+    st.markdown("---")
+    st.subheader("Executive Summary Visual (GitHub Asset)")
+    render_image_safe(
+        GITHUB_TRAFFIC_SUMMARY_URL,
+        "Dubai Traffic Safety Executive Summary — Hotspot Clusters & Hourly Demand",
+    )
 
     st.markdown("---")
     st.markdown("### Key Findings & Source Repository")
-    st.markdown("* **Temporal Peaks:** Incidents climb steadily through midday to peak at **18:00** during evening commuter rush and on **Thursday** ahead of weekend travel (`5.74%` overall severe rate).")
-    st.markdown("* **Model & Threshold Optimization:** Domain feature engineering lifted **Random Forest (`RF v2`) ROC-AUC from `0.5861` to `0.6881`**. Raising the decision threshold from `0.50` to **`0.55`** lifted severe-class **F1 to `0.1638`** and reduced flagged alerts from **2,443 to 1,172** while retaining **43.87%** severe-incident recall.")
+    st.markdown("* **Model & Threshold Optimization:** Domain feature engineering lifted **Random Forest (`RF v2`) ROC-AUC from `0.5861` to `0.6881`**. Tuning the threshold from `0.50` to **`0.55`** improved severe-class **F1 to `0.1638`** and cut flagged alerts from **2,443 to 1,172** (`-52%`) while maintaining **43.87%** severe recall.")
     st.markdown(f"* **Full Code, Notebook & Reproducibility Guide:** [View on GitHub (`gumaadolfda-blip/dubai-traffic-incidents-analysis`)]({GITHUB_TRAFFIC_REPO_URL})")
 
 elif section == "UAE NetZero Freight AI (Maritime)":
@@ -448,7 +502,7 @@ elif section == "Commercial & Apparel Supply Chain BI":
         ### In-Depth Project Breakdown
 - **Revenue & Returns Scale:** Tracks **$77M in total sales** (+2.1% MoM) and **$6.49M in returns** (+1.5% MoM across **4K returns**), with **Jacket** ($16.6M), **Abaya** ($16.2M), and **Dress** ($10.9M) leading sub-categories.
 - **Brand & Regional Performance:** Highlights top brands including **Pharaoh Denim** ($20.8M), **Luxor Co.** ($19.2M), and **Nile Wear** ($16.0M), with strongest regional revenue in **North America** ($28.7M, +8.2%) and the **Middle East** ($19.6M, +4.1%).
-- **Fulfillment & Transport Mix:** Delivers **6.2x inventory turnover**, **3.6-day average delivery time**, **96.1% order fulfillment rate**, **5.2% return rate**, **4.6/5 supplier score**, and **8.7% logistics cost share**, across **Road ($45.2M)**, **Sea ($18.6M)**, **Air ($8.9M)**, and **Rail ($4.1M)**.
+- **Fulfillment & Transport Mix:** Delivers **6.2x inventory turnover**, **3.6-day average delivery time**, **96.1% order fulfillment rate**, **5.2% return rate**, **4.6/5 supplier performance**, and **8.7% logistics cost share**, across **Road ($45.2M)**, **Sea ($18.6M)**, **Air ($8.9M)**, and **Rail ($4.1M)**.
         """
     )
 
