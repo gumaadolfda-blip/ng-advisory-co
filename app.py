@@ -3,7 +3,7 @@ import pandas as pd
 
 # Page Configuration
 st.set_page_config(
-    page_title="NG Advisory Co. | Guma Adolf",
+    page_title="NG Advisory Co.",
     page_icon="NG2.jpg",
     layout="wide",
 )
