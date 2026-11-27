@@ -175,46 +175,7 @@ if section == "Home & Overview":
             """,
             unsafe_allow_html=True,
         )
-with col_n4:
-        render_image_safe(
-            "NG PRO4.jpeg",
-            "Project 4: Logistics Supply Chain Optimization Trend (12-Month Trajectory)",
-        )
-        st.markdown(
-            """
-            **12-Month Stock Accuracy vs. Turnaround Time Compression:**
-- Tracks **stock accuracy climbing steadily from 88% in Month 1 to 98.5% by Month 12** (reaching 98% around Month 4 and 99% around Month 11) while **delivery turnaround time decreases from 5 days down to 1.9 days (optimized)**.
-- Illustrates how tighter inventory controls and faster dispatch/turnaround cycles compound over a 12-month horizon.
-- Anchors four core operational outcomes: **increased stock visibility**, **reduced order cycle time**, **enhanced data-driven decision making**, and **improved customer satisfaction**.
-            """
-        )
 
-        st.markdown("---")
-        st.markdown("#### AI & Machine Learning Intelligence Filter")
-        ai_focus = st.selectbox(
-            "Select AI Model Spotlight",
-            [
-                "All AI Highlights",
-                "Dubai Traffic AI (RF v2 & K-Means)",
-                "UAE NetZero Freight AI (Port & Surge ML)",
-            ],
-            key="home_ai_spotlight_filter",
-        )
-
-        if ai_focus in ("All AI Highlights", "Dubai Traffic AI (RF v2 & K-Means)"):
-            st.markdown(
-                """
-                - **Dubai Traffic Severity AI (`RF v2`):** Feature engineering (rush/night flags, distance to center, `geo_cluster`, incident groups) lifted **ROC-AUC from `0.5861` to `0.6881`** across **23,472** records.
-                - **Spatial & Threshold Intelligence:** K-Means (`k=3`) flagged **Cluster 2 (Hatta corridor)** at **18.84% severe** (`>3×` citywide), and threshold `0.55` cut alerts from **2,443 to 1,172** (`-52%`) at **43.87% recall**.
-                """
-            )
-
-        if ai_focus in ("All AI Highlights", "UAE NetZero Freight AI (Port & Surge ML)"):
-            st.markdown(
-                """
-                - **UAE NetZero Freight ML:** Chronological `RandomForestRegressor` and **81.1%** Congestion Surge Classifier across **43,020** port-day records (`15` UAE ports) model **9,287 tons CO₂ abated** and **AED 6.49M** annual fuel ROI.
-                """
-            )
     st.markdown("---")
     st.markdown("### Flagship ML & Geospatial Intelligence Comparison")
     st.markdown("Compare the **Dubai Traffic Incidents** and **UAE NetZero Freight** engines side by side:")
@@ -321,6 +282,33 @@ with col_n4:
 - Anchors four core operational outcomes: **increased stock visibility**, **reduced order cycle time**, **enhanced data-driven decision making**, and **improved customer satisfaction**.
             """
         )
+
+        st.markdown("---")
+        st.markdown("#### AI & Machine Learning Intelligence Filter")
+        ai_focus = st.selectbox(
+            "Select AI Model Spotlight",
+            [
+                "All AI Highlights",
+                "Dubai Traffic AI (RF v2 & K-Means)",
+                "UAE NetZero Freight AI (Port & Surge ML)",
+            ],
+            key="home_ai_spotlight_filter",
+        )
+
+        if ai_focus in ("All AI Highlights", "Dubai Traffic AI (RF v2 & K-Means)"):
+            st.markdown(
+                """
+                - **Dubai Traffic Severity AI (`RF v2`):** Feature engineering (rush/night flags, distance to center, `geo_cluster`, incident groups) lifted **ROC-AUC from `0.5861` to `0.6881`** across **23,472** records.
+                - **Spatial & Threshold Intelligence:** K-Means (`k=3`) flagged **Cluster 2 (Hatta corridor)** at **18.84% severe** (`>3×` citywide), and threshold `0.55` cut alerts from **2,443 to 1,172** (`-52%`) at **43.87% recall**.
+                """
+            )
+
+        if ai_focus in ("All AI Highlights", "UAE NetZero Freight AI (Port & Surge ML)"):
+            st.markdown(
+                """
+                - **UAE NetZero Freight ML:** Chronological `RandomForestRegressor` and **81.1%** Congestion Surge Classifier across **43,020** port-day records (`15` UAE ports) model **9,287 tons CO₂ abated** and **AED 6.49M** annual fuel ROI.
+                """
+            )
 
     st.markdown("---")
     st.markdown("### Executive Command Center & Professional Gallery")
